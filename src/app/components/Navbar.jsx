@@ -1,138 +1,80 @@
-/** @format */
-"use client"
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
+  Link,
+  Button,
 } from "@nextui-org/react";
-import { Spacer } from "@nextui-org/react";
-import { Link } from "react-scroll";
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+// import { AcmeLogo } from "./AcmeLogo.jsx";
 
-export const menuItems = [
-  {
-    name: "Accueil",
-    to: "home",
-  },
-  {
-    name: "A propos",
-    to: "about",
-  },
-  {
-    name: "Compétences",
-    to: "skills",
-  },
-  {
-    name: "Contact",
-    to: "test1",
-  },
-];
-
-export default function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggle = () => {
-    menu.current.click();
-  };
-  const menu = useRef(null);
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [isMenuOpen]);
-
+export default function App() {
   return (
     <Navbar
-      maxWidth="2xl"
-      className="max-sm:flex bg-transparent max-sm:justify-around "
+      maxWidth="full"
+      id="nav"
+      classNames={{
+        item: [
+          "flex",
+          "relative",
+          // 'bg-transparent',
+          "h-full",
+          "items-center",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-primary",
+        ],
+      }}
     >
-      <NavbarBrand className="text-yellow">
-        <p className="font-bold text-inherit">NB</p>
+      <NavbarBrand>
+        {/* <AcmeLogo /> */}
+        <Image
+          src="/logo-no-background.png"
+          alt="logo"
+          width={50}
+          height={50}
+        />{" "}
+        <p className="ml-3 text-[#FF62AD] font-sans text-lg">Portfolio</p>
       </NavbarBrand>
-      <NavbarContent className="hidden  sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link
-            activeClass="active"
-            activeStyle={{ color: "red" }}
-            to="home"
-            spy={true}
-            smooth={true}
-            // offset={5}
-            duration={500}
-            href="#"
-          >
-            Accueil
+          <Link color="foreground" href="#" className="text-white">
+            Home
           </Link>
         </NavbarItem>
-        <Spacer />
-        <NavbarItem>
-          <Link
-            activeClass="active"
-            activeStyle={{ color: "red" }}
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            aria-current="page"
-          >
-            <span className="text-white hover:cursor-pointer ">A propos</span>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            About me
           </Link>
         </NavbarItem>
-        <Spacer />
         <NavbarItem>
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            color="foreground"
-            href="#"
-          >
-            <span className="text-white">Compétences</span>
+          <Link color="foreground" href="#" className="text-white">
+            Skills
           </Link>
         </NavbarItem>
-        <Spacer />
         <NavbarItem>
-          <Link
-            activeClass="active"
-            to="test1"
-            spy={true}
-            smooth={true}
-            // offset={50}
-            duration={500}
-            className="text-red"
-            href="#"
-          >
-            <span className="text-white">Contact</span>
+          <Link color="foreground" href="#" className="text-white">
+            Projects
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        onChange={(isMenuOpen) => console.log(isMenuOpen)}
-        ref={menu}
-        className="sm:hidden max-sm:flex max-sm:justify-end "
-      />
-      <NavbarMenu className=" bg-[#141D2E] bg-blur-sm  ">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            onClick={() => setIsMenuOpen(false)}
-            key={`${item}-${index}`}
-          >
-            <Link
-              className="w-full hover:cursor-pointer "
-              to={item.to}
-              onClick={() => toggle()}
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            Contact me
+          </Button>
+        </NavbarItem>
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">White</Link>
+        </NavbarItem>
+      </NavbarContent>
     </Navbar>
   );
 }

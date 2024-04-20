@@ -13,3 +13,14 @@ body {
     text-wrap: balance;
   }
 }
+@font-face {
+  font-family: 'MaPolice';
+  src:  url('./fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MaPolice', sans-serif;
+}
+#nav{
+  background:transparent;
+}
