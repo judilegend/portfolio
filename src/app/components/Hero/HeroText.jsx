@@ -3,12 +3,12 @@ import { Button } from "@nextui-org/react";
 const HeroText = () => {
   return (
     <div>
-      <section className="text-white font-semibold  max-w-[700px] line-clamps-1">
+      <section className="text-white font-semibold  max-w-[750px] line-clamps-1">
         <h1 className="text-[64px]">Hi</h1>
         <h2 className="text-5xl">
           I’m Judi-Legend a{" "}
-          <span className="text-[#5DE4F6]"> Frontend developper </span>
-          anxcxd a <span className="text-[#5DE4F6]">Fullstack Nextjs</span>
+          <span className="text-[#5DE4F6]"> MERN Stack developper </span>
+          and <span className="text-[#5DE4F6]">Fullstack Nextjs</span>
         </h2>
         <p className="mt-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ducimus

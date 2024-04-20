@@ -9,8 +9,8 @@ export default function Hero() {
         <section>
           <div>
             <Image
-              height={600}
-              width={600}
+              height={650}
+              width={650}
               alt="Hero image"
               src="/accepted.png"
             />
