@@ -41,7 +41,7 @@ export default function App() {
           width={50}
           height={50}
         />{" "}
-        <p className="ml-3 text-[#FF62AD] font-sans text-lg">Portfolio</p>
+        <p className="ml-1 text-violet-400 font-bold font-arial text-lg">Legend</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
