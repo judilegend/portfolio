@@ -8,12 +8,10 @@ const HeroText = () => {
         <h2 className="text-5xl">
           I’m Judi-Legend a{" "}
           <span className="text-[#5DE4F6]"> MERN Stack developper </span>
-          and <span className="text-[#5DE4F6]">Fullstack Nextjs</span>
+          and a <span className="text-[#5DE4F6]"> UI/UX Designer </span>
         </h2>
         <p className="mt-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ducimus
-          exercitationem recusandae accusamus quis quaerat iste nam placeat,
-          quasi quo qui ipsam.
+          I’m Judi-Legend a Frontend developper and a UI/UX Designer
         </p>
         <Button className="bg-[#FF62AD] mt-4 w-[200px]">Download CV</Button>
         {/* <Button variant="flat" color="#FF62AD" className="text-white">Download CV</Button> */}

@@ -9,9 +9,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="h-screen px-20 pt-4">
-        <Navbar/>
-        <Hero/>
+    <main className="px-20 pt-4 relative">
+      <Navbar />
+      <Hero />
     </main>
   );
 }
