@@ -1,41 +1,44 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import HeroText from "./HeroText"
+import { motion } from "framer-motion";
+import HeroText from "./HeroText";
+import Icons from "./ICons";
 export default function Hero() {
   return (
     <>
-      <main className="px-20 flex justify-between  items-center relative h-[70vh]">
+      <main className="px-4 flex justify-between  items-center  h-[90vh]">
         <HeroText />
         <section>
           <div>
             <Image
-              height={650}
-              width={650}
+              height={550}
+              width={550}
               alt="Hero image"
-              src="/accepted.png"
+              src="/accepted2.png"
             />
           </div>
         </section>
-        <img src="/Ellipse5.svg" alt="bg" className="absolute" />
-        <div className="absolute left-7 flex flex-col gap-5">
-          <span>
-            <a href="#">
-              {" "}
-              <Image src={"/linkedin.svg"} width={40} height={40} />
-            </a>
-          </span>{" "}
-          <span>
-            <a href="#">
-              {" "}
-              <Image src={"/facebook.svg"} width={40} height={40} />
-            </a>
-          </span>
-          <span>
-            <a href="#">
-              {" "}
-              <Image src={"/github.svg"} width={40} height={40} />
-            </a>
-          </span>
+        {/* <img src="/Ellipse5.svg" alt="bg" className="absolute" /> */}
+        <div className="absolute left-2">
+          <Icons />
+        </div>
+        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+          <a href="#about">
+            <div
+              className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2
+            "
+            >
+              <motion.div
+                animated={{ y: [0, 24, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="w-3 h-3 rounded-full bg-secondary mb-1"
+              />
+            </div>
+          </a>
         </div>
       </main>
     </>

@@ -35,15 +35,9 @@ export default function App() {
     >
       <NavbarBrand>
         {/* <AcmeLogo /> */}
-        <Image
-          src="/logo-no-background.png"
-          alt="logo"
-          width={50}
-          height={50}
-        />{" "}
-        <p className="ml-1 text-violet-400 font-bold font-arial text-lg">Legend</p>
+        <Image src="/logo.png" alt="logo" width={120} height={120} />{" "}
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-10" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#" className="text-white">
             Home
@@ -66,13 +60,19 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Contact me
-          </Button>
-        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link href="#">White</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button
+            as={Link}
+            color="primary"
+            href="#"
+            variant="flat"
+            className="bg-blue text-red"
+          >
+            Contact me
+          </Button>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

@@ -23,4 +23,6 @@ body {
 }
 #nav{
   background:transparent;
+  position: fixed;
+  padding: 0 4rem;
 }
