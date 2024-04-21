@@ -4,7 +4,7 @@ const HeroText = () => {
   return (
     <div>
       <section className="text-white font-semibold  max-w-[750px] line-clamps-1">
-        <h1 className="text-[64px]">Hi</h1>
+        <h1 className="text-[64px] ">Hi <span className="inline-block"><img src="/icons8-agitant-la-main-emoji-48.png" alt="" /></span></h1>
         <h2 className="text-5xl">
           I’m Judi-Legend a{" "}
           <span className="text-[#5DE4F6]"> MERN Stack developper </span>

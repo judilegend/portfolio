@@ -1,7 +1,8 @@
-import Navbar from "./components/Navbar";
-import Image from "next/image";
 import "./globals.css";
-import Hero from './components/Hero/Hero'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import ICons from "./components/Hero/ICons";
 export const metadata = {
   title: "Home Page",
   description: "Portfolio",
@@ -9,9 +10,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="px-20 pt-4 relative">
+    <main className="h-screen bg-[#181818] px-20 pt-4 relative">
       <Navbar />
       <Hero />
+      <About />
+      <div className="fixed left-2 bottom-10">
+        <ICons />
+      </div>
     </main>
   );
 }

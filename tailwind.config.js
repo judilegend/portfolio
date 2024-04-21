@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   content: [
@@ -30,6 +30,8 @@ module.exports = {
             blue: "#3A86FF",
             frame: "rgba(141,132,132,0.08)",
             red: "#EF080F",
+            gradient2:
+              "linear-gradient(90deg, rgba(25,118,210,1) 0%, rgba(77,79,200,1) 35%, rgba(123,44,191,1) 100%)",
           },
         },
       },

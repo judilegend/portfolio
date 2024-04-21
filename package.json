@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.0.31",
     "@nextui-org/react": "^2.2.10",
     "clsx": "^2.1.0",
     "framer-motion": "^11.1.7",
