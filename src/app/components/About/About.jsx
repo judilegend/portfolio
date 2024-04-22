@@ -10,7 +10,7 @@ export default function About() {
       id="about"
     >
       <section className=" flex flex-col gap-20">
-        <div className="w-[2000px]  justify-evenly  max-2xl:w-screen  max-lg:gap-20 flex flex-row max-lg:mx max-lg:justify-center items-center mx-auto max-md:flex-col-reverse  max-lg:px-8">
+        <div className="w-[2000px]  justify-around  ">
           <AboutImage />
           <AboutText />
         </div>
