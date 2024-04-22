@@ -6,7 +6,7 @@ import AboutText from "./AboutText";
 export default function About() {
   return (
     <div
-      className="h-screen max-w-full overflow-hidden  flex items-center justify-center"
+      className="h-screen max-w-full overflow-hidden   flex items-center justify-center"
       id="about"
     >
       <section className=" flex flex-col gap-20">

@@ -8,52 +8,37 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      theme: {
-        extend: {
-          backgroundImage: {
-            "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-            "gradient-conic":
-              "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          },
-          colors: {
-            white: "#fff",
-            whiteBorder: "rgba(255,255,255,0.19)",
-            whiteText: "rgba(255,255,255,0.8)",
-            yellow: "#FFD600",
-            blue: "#3A86FF",
-            frame: "rgba(141,132,132,0.08)",
-            red: "#EF080F",
-            gradient2:
-              "linear-gradient(90deg, rgba(25,118,210,1) 0%, rgba(77,79,200,1) 35%, rgba(123,44,191,1) 100%)",
-          },
-        },
-      },
-    },
-  },
   darkMode: "class",
   plugins: [
     nextui({
       themes: {
         light: {
-          // ...
+          layout: {},
           colors: {
-            foreground: "#fff",
+            primary: {
+              DEFAULT: "#5DE4F6",
+              foreground: "#000000",
+            },
+            secondary: {
+              DEFAULT: "#FF62AD",
+              foreground: "#000000",
+            },
+            focus: "#BEF264",
           },
         },
         dark: {
-          // ...
           colors: {
-            foreground: "#fff",
+            primary: {
+              DEFAULT: "#5DE4F6",
+              foreground: "#FFFFFF",
+            },
+            secondary: {
+              DEFAULT: "#FF62AD",
+              foreground: "#FFFFFF",
+            },
+            focus: "#BEF264",
           },
         },
-        // ... custom themes
       },
     }),
   ],
