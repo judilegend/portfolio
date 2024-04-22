@@ -7,10 +7,9 @@ export const metadata = {
   title: "Home Page",
   description: "Portfolio",
 };
-
 export default function Home() {
   return (
-    <main className="h-screen bg-[#181818] px-20 pt-4 relative">
+    <main className="h-screen  px-20 pt-4 relative">
       <Navbar />
       <Hero />
       <About />
@@ -20,3 +19,4 @@ export default function Home() {
     </main>
   );
 }
+// bg-[#181818]

@@ -11,7 +11,7 @@ export default function AboutText() {
       transition={{ duration: 0.5 }}
     >
       <Title title={"About me"} />
-      <div className="text-black mt-6 z-50 ">
+      <div className="mt-6 z-50 ">
         <h3 className=" font-bold ">I LOVE BEING A PYTHON DEVELOPER!</h3>
         <p className=" max-w-[500px] max-md:max-w-[500px] max-[565px]:max-w-[450px] max-[475px]:max-w-[400px] max-[420px]:max-w-[330px] max-[359px]:max-w-[300px] max-lg:max-w-[400px] font-normal text-justify mt-2 ">
           My name is Ando Nirina RANDRIANJAFY, and as a Python developer with a

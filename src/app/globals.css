@@ -2,27 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  /* color: rgb(var(--foreground-rgb)); */
-  background: #181818
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 @font-face {
-  font-family: 'MaPolice';
-  src:  url('./fonts/Roboto-Bold.ttf') format('truetype');
+  font-family: "MaPolice";
+  src: url("./fonts/Roboto-Bold.ttf") format("truetype");
 }
 
 body {
-  font-family: 'MaPolice', sans-serif;
+  font-family: "MaPolice", sans-serif;
 }
-#nav{
-  background:transparent;
+#nav {
+  background: transparent;
   position: fixed;
   padding: 0 4rem;
 }

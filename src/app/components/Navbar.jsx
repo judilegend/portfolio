@@ -1,3 +1,7 @@
+"use client";
+
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import React from "react";
 import {
   Navbar,
@@ -9,8 +13,23 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 // import { AcmeLogo } from "./AcmeLogo.jsx";
-
+import { SunIcon } from "./Icons/SunIcon";
+import { MoonIcon } from "./Icons/MoonIcon";
+import { Switch } from "@nextui-org/react";
 export default function App() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+  const handleThemeChange = () => {
+    // Inversez le thème actuel lors du changement du commutateur
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <Navbar
       maxWidth="full"
@@ -60,8 +79,16 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">White</Link>
+        <NavbarItem className="text-xs lg:flex">
+          <Switch
+            defaultSelected={theme === "dark"} // Définissez le commutateur sur "dark" si le thème actuel est "dark"            size="md"
+            color="success"
+            startContent={<SunIcon />}
+            endContent={<MoonIcon />}
+            onChange={handleThemeChange} // Appelez la fonction de gestion du changement de thème lorsque le commutateur est modifié
+          >
+            {theme == 'light'? "Light mode" : "Dark mode" }
+          </Switch>
         </NavbarItem>
         <NavbarItem>
           <Button
@@ -69,7 +96,7 @@ export default function App() {
             color="primary"
             href="#"
             variant="flat"
-            className="bg-blue text-red"
+            className="bg-secondary text-red"
           >
             Contact me
           </Button>
