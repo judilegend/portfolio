@@ -9,7 +9,7 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <main className="h-screen  px-20 pt-4 relative">
+    <main className="h-screen  max-w-[1800px] mx-auto px-6 pt-4 relative">
       <Navbar />
       <Hero />
       <About />

@@ -12,15 +12,15 @@ export default function Hero() {
         <section>
           <div>
             <Image
-              height={550}
-              width={550}
+              height={400}
+              width={400}
               alt="Hero image"
-              src="/accepted2.png"
+              src="/accepted1.png"
             />
           </div>
         </section>
         {/* <img src="/Ellipse5.svg" alt="bg" className="absolute" /> */}
-   
+
         <div className="absolute xs:bottom-10 left-0 bottom-5 w-full flex justify-center items-center">
           <a href="#about">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-pink-500 flex justify-center items-start p-2">

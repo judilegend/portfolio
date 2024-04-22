@@ -34,6 +34,7 @@ export default function App() {
     <Navbar
       maxWidth="full"
       id="nav"
+      style={{ padding: 0 }}
       classNames={{
         item: [
           "flex",
@@ -50,6 +51,7 @@ export default function App() {
           "data-[active=true]:after:rounded-[2px]",
           "data-[active=true]:after:bg-primary",
         ],
+        root: "px-0", // Remplacez px-6 par px-0
       }}
     >
       <NavbarBrand>
@@ -87,7 +89,7 @@ export default function App() {
             endContent={<MoonIcon />}
             onChange={handleThemeChange} // Appelez la fonction de gestion du changement de thème lorsque le commutateur est modifié
           >
-            {theme == 'light'? "Light mode" : "Dark mode" }
+            {theme == "light" ? "Light mode" : "Dark mode"}
           </Switch>
         </NavbarItem>
         <NavbarItem>
