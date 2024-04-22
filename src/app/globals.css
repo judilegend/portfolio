@@ -18,5 +18,12 @@ body {
 #nav {
   background: transparent;
   position: fixed;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
+  padding: 0;
+  margin: auto;
+  max-width: 1800px;
+}
+header{
+  padding: 0;
+  margin: 0;
 }
