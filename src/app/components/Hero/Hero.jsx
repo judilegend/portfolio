@@ -35,7 +35,7 @@ export default function Hero() {
             </svg>
           </button>
         </div> */}
-        <div className="absolute xs:bottom-10 left-0 bottom-5 w-full flex justify-center items-center">
+        <div className="absolute xs:bottom-10 left-0 bottom-0 w-full flex justify-center items-center">
           <a href="#about">
             <div className="scrolldown">
               <div className="chevrons">

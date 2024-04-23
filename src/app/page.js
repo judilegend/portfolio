@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <About /> */}
-      <div className="fixed left-20 bottom-20">
+      <div className="fixed left-8 bottom-10">
         <ICons />
       </div>
     </main>

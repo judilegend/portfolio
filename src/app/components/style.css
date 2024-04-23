@@ -205,124 +205,193 @@
 
 @keyframes pulse {
   100% {
-    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+    box-shadow: 0 0 0 45px rgba(193, 244, 246, 0);
   }
 }
 /* Cool share button made by: csozi | Website: english.csozi.hu*/
+.share {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  transition: 0.4s ease-in-out;
+  margin-top: 60px;
+}
 
-.buttons {
+.btn1 {
   position: relative;
-  display: grid;
-  place-items: center;
-  height: fit-content;
-  width: fit-content;
-  transition: 0.3s;
-  border-radius: 50%;
-}
-
-.buttons:hover {
-  padding: 60px;
-}
-
-.buttons:hover .button {
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
-}
-
-.main-button {
-  position: relative;
-  display: grid;
-  place-items: center;
-  padding: 10px;
+  width: 3em;
+  height: 3em;
+  outline: none;
   border: none;
-  background: #e8e8e8;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
   border-radius: 50%;
-  transition: 0.2s;
-  z-index: 100;
+  background-color: white;
+  transition: 0.4s all;
 }
 
-.button {
+.btn1 .instagram {
+  margin: auto;
+  fill: #cc39a4;
+}
+
+.btn1 .tooltiptext1 {
+  visibility: hidden;
+  width: 6em;
+  height: 8em;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1em;
   position: absolute;
-  display: grid;
-  place-items: center;
-  padding: 10px;
+  left: -1.5em;
+  top: -8em;
+  z-index: 1;
+  transition: 0.1s ease-in-out;
+}
+
+.btn1 .tooltiptext1 .card1 {
+  width: 4em;
+  height: 4em;
+  background-color: white;
+}
+
+.btn1 .tooltiptext1 .account {
+  margin-top: 1em;
+}
+
+.btn1 .tooltiptext1 .username {
+  font-size: 0.7em;
+  margin-top: 1.6em;
+  font-weight: bold;
+}
+
+.btn1:hover .tooltiptext1 {
+  transform: translateY(-1em);
+  visibility: visible;
+}
+
+.btn1:hover {
+  background-color: #cc39a4;
+}
+
+.btn1:hover .instagram {
+  fill: white;
+}
+
+.btn2 {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  outline: none;
   border: none;
-  background: #e8e8e8;
-  box-shadow: 5px 5px 12px rgba(202, 202, 202, 0), -5px -5px 12px rgba(255, 255, 255, 0);
-  transition: 0.3s;
   border-radius: 50%;
+  background-color: white;
+  transition: 0.4s all;
 }
 
-.discord-button:hover {
-  background: #5865F2;
+.btn2 .twitter {
+  margin-top: 0.25em;
+  margin-left: 0.1em;
+  fill: #03a9f4;
 }
 
-.buttons:hover .discord-button {
-  translate: 70px 0px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn2 .tooltiptext2 {
+  visibility: hidden;
+  width: 6em;
+  height: 8em;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1em;
+  position: absolute;
+  left: -1.5em;
+  top: -8em;
+  z-index: 1;
+  transition: 0.1s ease-in-out;
 }
 
-.twitter-button:hover {
-  background: #1CA1F1;
+.btn2 .tooltiptext2 .card1 {
+  width: 4em;
+  height: 4em;
+  background-color: white;
 }
 
-.buttons:hover .twitter-button {
-  translate: 47px -47px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn2 .tooltiptext2 .account {
+  margin-top: 1em;
 }
 
-.reddit-button:hover {
-  background: #FF4500;
+.btn2 .tooltiptext2 .username {
+  font-size: 0.6em;
+  margin-top: 1.6em;
+  font-weight: bold;
 }
 
-.buttons:hover .reddit-button {
-  translate: 0px -70px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn2:hover .tooltiptext2 {
+  transform: translateY(-1em);
+  visibility: visible;
 }
 
-.messenger-button:hover {
-  background: #0093FF;
+.btn2:hover {
+  background-color: #03a9f4;
 }
 
-.buttons:hover .messenger-button {
-  translate: -47px -47px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn2:hover .twitter {
+  fill: white;
 }
 
-.pinterest-button:hover {
-  background: #F0002A;
+.btn3 {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s all;
 }
 
-.buttons:hover .pinterest-button {
-  translate: -70px 0px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn3 .tooltiptext3 {
+  visibility: hidden;
+  width: 6em;
+  height: 8em;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1em;
+  position: absolute;
+  left: -1.5em;
+  top: -8em;
+  z-index: 1;
+  transition: 0.1s ease-in-out;
 }
 
-.instagram-button:hover {
-  background: #F914AF;
+.btn3 .tooltiptext3 .card1 {
+  width: 4em;
+  height: 4em;
+  background-color: white;
 }
 
-.buttons:hover .instagram-button {
-  translate: -47px 47px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn3 .tooltiptext3 .account {
+  margin-top: 1em;
 }
 
-.snapchat-button:hover {
-  background: #FFFC00;
+.btn3 .tooltiptext3 .username {
+  font-size: 0.7em;
+  margin-top: 1.6em;
+  font-weight: bold;
 }
 
-.buttons:hover .snapchat-button {
-  translate: 0px 70px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn3:hover .tooltiptext3 {
+  transform: translateY(-1em);
+  visibility: visible;
 }
 
-.whatsapp-button:hover {
-  background: #25D366;
+.btn3:hover {
+  background-color: black;
 }
 
-.buttons:hover .whatsapp-button {
-  translate: 47px 47px;
-  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+.btn3:hover .git {
+  fill: white;
 }
-
-
