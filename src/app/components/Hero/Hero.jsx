@@ -9,8 +9,8 @@ export default function Hero() {
     <>
       <main className="px-4 flex relative justify-between  items-center  h-[90vh]">
         <HeroText />
-        <section>
-          <div>
+        <section className="">
+          <div className="card bg-black">
             <Image
               height={400}
               width={400}
@@ -20,19 +20,28 @@ export default function Hero() {
           </div>
         </section>
         {/* <img src="/Ellipse5.svg" alt="bg" className="absolute" /> */}
-
+        {/* <div className="absolute left-[50%] ">
+          <button class="button">
+            <svg
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              width="26px"
+            >
+              <path
+                d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div> */}
         <div className="absolute xs:bottom-10 left-0 bottom-5 w-full flex justify-center items-center">
           <a href="#about">
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-pink-500 flex justify-center items-start p-2">
-              <motion.div
-                animate={{ y: [0, 24, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-white mb-1"
-              />
+            <div className="scrolldown">
+              <div className="chevrons">
+                <div className="chevrondown"></div>
+                <div className="chevrondown"></div>
+              </div>
             </div>
           </a>
         </div>

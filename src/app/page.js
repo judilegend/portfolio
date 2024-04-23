@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./style.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -12,8 +13,8 @@ export default function Home() {
     <main className="h-screen  max-w-[1800px] mx-auto px-6 pt-4 relative">
       <Navbar />
       <Hero />
-      <About />
-      <div className="fixed left-2 bottom-10">
+      {/* <About /> */}
+      <div className="fixed left-20 bottom-20">
         <ICons />
       </div>
     </main>
