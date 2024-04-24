@@ -10,7 +10,6 @@ export default function AboutText() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Title title={"About me"} />
       <div className="mt-6 z-50 ">
         <h3 className=" font-bold ">
           My full name is TAHIRIMIHAJA Albertinot Judickael
