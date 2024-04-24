@@ -13,7 +13,7 @@ export default function Home() {
     <main className="h-screen  max-w-[1800px] mx-auto px-6 pt-4 relative">
       <Navbar />
       <Hero />
-      {/* <About /> */}
+      <About />
       <div className="fixed left-8 bottom-10">
         <ICons />
       </div>
