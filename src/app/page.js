@@ -1,29 +1,34 @@
-import "./globals.css";
-import "./style.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import ICons from "./components/Hero/ICons";
-export const metadata = {
-  title: "Home Page",
-  description: "Portfolio",
-};
+// bg-[#181818]
+"use client";
+import { useState, useEffect } from "react";
+
+import dynamic from "next/dynamic";
+import Loading from "./Loading";
+
+const MyComponentsDynamic = dynamic(() => import("./portfolio"), {
+  loading: () => <Loading />,
+});
+
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simuler une durée de chargement avant de masquer l'animation de chargement
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6000); // 2000 millisecondes (2 secondes)
+
+    // Nettoyer le timer lors du démontage du composant
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="h-screen  max-w-[1500px] mx-auto pt-4 relative">
-      <Navbar />
-      <Hero />
-      <About />
-      <div className="fixed left-8 bottom-10">
-        <ICons />
-      </div>
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <div>
+      {isLoading ? (
+        <Loading /> // Afficher l'animation de chargement si isLoading est vrai
+      ) : (
+        <MyComponentsDynamic /> // Afficher votre composant dynamique une fois le chargement terminé
+      )}
+    </div>
   );
 }
-// bg-[#181818]

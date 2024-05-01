@@ -5,7 +5,12 @@ const Skills = () => {
   return (
     <div className="h-screen">
       Skills
-      <Progress aria-label="Loading..." value={60} className="max-w-md" />
+      <Progress
+        aria-label="Loading..."
+        value={60}
+        showValueLabel={true}
+        className="max-w-md"
+      />
     </div>
   );
 };
