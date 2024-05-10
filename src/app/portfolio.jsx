@@ -13,10 +13,12 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <main className="h-screen  max-w-[1500px] mx-auto pt-4 relative">
+    <main className=" max-w-[1250px] mx-auto pt-4 relative">
       <Navbar />
       <Hero />
-      <About />
+      <div className="flex items-center justify-center">
+        <About />
+      </div>
       <div className="fixed left-8 bottom-10">
         <ICons />
       </div>

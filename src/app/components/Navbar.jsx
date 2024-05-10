@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <Navbar
-      maxWidth="2xl"
+      maxWidth="xl"
       id="nav"
       style={{ padding: 0 }}
       classNames={{

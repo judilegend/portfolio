@@ -9,17 +9,16 @@ export default function Hero() {
     <>
       <main className="px-4 flex relative justify-between  items-center  h-[95vh]">
         <HeroText />
-        <section className="">
-          <div className="card bg-black">
-            <Image
-              height={400}
-              width={400}
+        <section className="card bg-black h-fit w-[300px] flex items-center justify-center">
+          <div className="">
+            <img
               alt="Hero image"
               src="/accepted1.png"
+              className="w-auto h-auto"
             />
           </div>
         </section>
-        {/* <img src="/Ellipse5.svg" alt="bg" className="absolute" /> */}
+        {/* <img src="/Ellipse5.svg" alt="bg" className="absolute left-0" /> */}
         {/* <div className="absolute left-[50%] ">
           <button class="button">
             <svg
