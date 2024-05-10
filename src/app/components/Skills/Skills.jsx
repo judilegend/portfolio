@@ -1,16 +1,13 @@
 import { Progress } from "@nextui-org/react";
 import React from "react";
+import SimpleTittle from "../Title/SimpleTittle";
 
 const Skills = () => {
   return (
     <div className="h-screen">
-      Skills
-      <Progress
-        aria-label="Loading..."
-        value={60}
-        showValueLabel={true}
-        className="max-w-md"
-      />
+      <div className="text-center ">
+        <SimpleTittle name="Skills" />
+      </div>
     </div>
   );
 };

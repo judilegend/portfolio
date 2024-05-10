@@ -17,9 +17,7 @@ export default function AboutText() {
         <p className="text-lg ">
           I'm a student at ENI ,L3 GB.I'm My name is Aina Nirina, I am currently
           a 5th year student at ENI, in the software engineering sector. I'm
-          passionate about frontend development, but that doesn't stop me from
           having basics in backend. Want to know more about me? I invite you to
-          download my CV below.{" "}
         </p>
       </div>
     </motion.section>
