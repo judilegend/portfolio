@@ -6,22 +6,22 @@ function CustomPaging() {
   const settings = {
     customPaging: function (i) {
       return (
-        <a>
+        <a className="">
           <img src={`/img0${i + 1}.png`} />
         </a>
       );
     },
     dots: true,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: "slick-dots slick-thumb ",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
-    <div className="">
+    <div className="max-w-[800px] mx-auto slider-container">
       <Slider {...settings}>
-        <div>
+        <div className="">
           <img src={"/img01.png"} />
         </div>
         <div>
