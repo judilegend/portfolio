@@ -22,7 +22,9 @@ export default function Home() {
       <div className="fixed left-8 bottom-10">
         <ICons />
       </div>
-      <Skills />
+      <div className="flex items-center justify-center">
+        <Skills />
+      </div>
       <Projects />
       <Contact />
     </main>

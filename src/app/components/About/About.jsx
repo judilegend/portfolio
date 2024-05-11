@@ -9,7 +9,7 @@ import { BentoGridThirdDemo } from "./BentoGridThirdDemo";
 import Services from "./Services";
 export default function About() {
   return (
-    <div className="h-[100vh] w-full " id="about">
+    <div className="h-[100vh] w-full px-10 " id="about">
       <div className="flex justify-center mt-[100px] 2xl:justify-start ">
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
