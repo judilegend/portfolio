@@ -11,14 +11,19 @@ const Skills = () => {
       <div className="text-center ">
         <SimpleTittle name="Skills" />
       </div>
-      <div className="grid grid-col grid-cols-2 grid-col-flow w-full gap-5 ">
-        <DevSkill
-          nom_skill="Next js"
-          niveau="70%"
-          className="row-span-2 col-span-1"
-        />
-        <DesignSkill className="row-span-1 col-span-1" />
-        <ToolSkill className="row-span-1 col-span-1" />
+      <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        <div className="row-span-2">
+          <DevSkill />
+        </div>
+        <div className="col-span-2">
+          <DesignSkill />
+        </div>
+        <div className="col-span-2 col-start-2 row-start-2">
+          <ToolSkill />
+        </div>
+        <div className="col-span-3 row-start-3">
+          <DesignSkill />
+        </div>
       </div>
     </div>
   );
