@@ -1,9 +1,11 @@
 import React from "react";
 import "./Card.css";
-const Card = () => {
+const Card = (props) => {
   return (
     <article class="card_project">
-      <div class="temporary_text">Place image here</div>
+      <div class="temporary_text">
+        <img src={props.capture} alt="photo" className="rounded-lg"/>
+      </div>
       <div class="card_content">
         <span class="card_title">This is a Title</span>
         <span class="card_subtitle">
