@@ -12,7 +12,16 @@
   cursor: pointer;
   color: white;
 }
-
+.card:after,
+.card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -3px;
+  bottom: -3px;
+  right: -3px;
+  top: -3px;
+}
 .card::before {
   content: "";
   position: absolute;
