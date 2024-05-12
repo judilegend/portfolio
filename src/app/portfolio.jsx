@@ -25,8 +25,12 @@ export default function Home() {
       <div className="flex items-center justify-center">
         <Skills />
       </div>
-      <Projects />
-      <Contact />
+      <div className="flex items-center justify-center">
+        <Projects />
+      </div>
+      <div className="flex items-center h-[100vh]">
+        <Contact />
+      </div>
     </main>
   );
 }
