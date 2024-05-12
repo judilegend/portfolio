@@ -7,21 +7,21 @@ import ToolSkill from "./ToolSkill";
 import Other from "./Other";
 const Skills = () => {
   return (
-    <div className="h-screen w-full mx-auto">
+    <div className="h-screen ">
       <div className="text-center ">
         <SimpleTittle name="Skills" />
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 gap-4">
-        <div className="row-span-2 container">
+      <div className="grid grid-cols-2 grid-rows-2 gap-8 max-w-[1100px] w-full justify-center mt-5">
+        <div className="row-span-2 ">
           <DevSkill />
         </div>
-        <div className="col-span-2 container">
+        <div className="col-span-2 ">
           <DesignSkill />
         </div>
-        <div className="container col-span-2 col-start-2 row-start-2">
+        <div className=" col-span-2 col-start-2 row-start-2">
           <ToolSkill />
         </div>
-        <div className="col-span-3 container row-start-3">
+        <div className="col-span-3  row-start-3">
           <Other />
         </div>
       </div>
