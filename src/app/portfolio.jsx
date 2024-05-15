@@ -33,8 +33,8 @@ export default function Home() {
           <Contact />
         </div>
       </main>
-      <footer className="w-full h-12 bg-blue-500 flex items-center items-center  ">
-        <h1 className="w-[300px] mx-auto">Judi-Legend hightlight 2024</h1>
+      <footer className="w-full h-12 bg-blue-500 flex items-center  ">
+        <h1 className="w-fit mx-auto">Judi-Legend hightlight 2024</h1>
       </footer>
     </>
   );

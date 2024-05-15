@@ -58,7 +58,7 @@ export default function App() {
         {/* <AcmeLogo /> */}
         <Image src="/logo.png" alt="logo" width={120} height={120} />{" "}
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-10" justify="center">
+      <NavbarContent className="hidden md:flex gap-10" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#" className="text-white">
             Home
@@ -83,11 +83,11 @@ export default function App() {
       <NavbarContent justify="end">
         <NavbarItem className="text-xs lg:flex">
           <Switch
-            defaultSelected={theme === "dark"} // Définissez le commutateur sur "dark" si le thème actuel est "dark"            size="md"
+            defaultSelected={theme === "dark"} 
             color="success"
             startContent={<SunIcon />}
             endContent={<MoonIcon />}
-            onChange={handleThemeChange} // Appelez la fonction de gestion du changement de thème lorsque le commutateur est modifié
+            onChange={handleThemeChange} 
           >
             {theme == "light" ? "Light mode" : "Dark mode"}
           </Switch>
