@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <About />
         </div>
-        <div className="fixed left-8 bottom-10 z-20 max-sm:left-1">
+        <div className="fixed left-3 bottom-10 z-20 max-sm:left-1 max-xl:left-3">
           <ICons />
         </div>
         <div className="flex items-center justify-center">
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <Projects />
         </div>
-        <div className="flex items-center h-[100vh]">
+        <div className="flex items-center h-[100vh] ">
           <Contact />
         </div>
       </main>

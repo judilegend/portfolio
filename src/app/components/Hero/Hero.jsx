@@ -18,7 +18,11 @@ export default function Hero() {
             />
           </div>
         </section>
-        {/* <img src="/Ellipse5.svg" alt="bg" className="absolute left-0" /> */}
+        {/* <img
+          src="/Ellipse5.svg"
+          alt="bg"
+          className="absolute left-[-300px] max-md:left-[0] w-full z-[-2222]"
+        /> */}
         {/* <div className="absolute left-[50%] ">
           <button class="button">
             <svg

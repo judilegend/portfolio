@@ -4,7 +4,7 @@ const HeroText = () => {
   return (
     <div>
       <section className="text-white font-semibold  max-w-[750px] max-sm:px-10 max-[1282px]:max-w-[600px] max-md:max-w-[700px]  line-clamps-1">
-        <h1 className="text-[64px] ">
+        <h1 className="text-[64px] max-md:text-[58px] ">
           Hi{" "}
           <span className="inline-block">
             <img src="/icons8-agitant-la-main-emoji-48.png" alt="" />
