@@ -15,7 +15,7 @@ const Projects = () => {
         {/* <Tittle /> */}
         <SimpleTittle name="My last Project" />
       </div>
-      <div className="grid grid-cols-3 gap-10 justify-center items-center">
+      <div className="grid grid-cols-3 gap-10 justify-center items-center max-[849px]:grid-cols-1 max-xl:grid-cols-2">
         <Card
           capture="/assets/ihm.png"
           tittle="Edt-app"
