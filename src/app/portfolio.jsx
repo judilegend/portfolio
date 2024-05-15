@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <About />
         </div>
-        <div className="fixed left-8 bottom-10">
+        <div className="fixed left-8 bottom-10 z-20">
           <ICons />
         </div>
         <div className="flex items-center justify-center">
