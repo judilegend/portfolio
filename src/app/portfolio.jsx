@@ -14,7 +14,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className=" max-w-[1250px] mx-auto pt-4 relative">
+      <main className=" max-w-[1250px] mx-auto pt-4 relative overflow-x-hidden">
         <Navbar />
         <div className="max-md:mt-20">
           <Hero />
@@ -25,13 +25,13 @@ export default function Home() {
         <div className="fixed left-3 bottom-10 z-20 max-sm:left-1 max-xl:left-3">
           <ICons />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <Skills />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <Projects />
         </div>
-        <div className="flex items-center h-[100vh] ">
+        <div className="flex items-center h-[100vh] overflow-y-hidden">
           <Contact />
         </div>
       </main>
