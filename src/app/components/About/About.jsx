@@ -9,16 +9,16 @@ import { BentoGridThirdDemo } from "./BentoGridThirdDemo";
 import Services from "./Services";
 export default function About() {
   return (
-    <div className="h-[100vh] w-full px-10 " id="about">
+    <div className="h-[100vh] max-md:h-fit w-full px-10 " id="about">
       <div className="flex justify-center mt-[100px] 2xl:justify-start ">
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="flex justify-between items-center ">
-        <section className="max-w-[600px] flex flex-col gap-5">
+      <main className="flex justify-between items-center max-md:flex-col  ">
+        <section className="flex flex-col gap-5">
           <AboutText />
-          <h3 className="text-3xl text-[#5DE4F6] m">What I do?</h3>
-          <div className="flex items-center gap-8">
+          <h3 className="text-3xl text-[#FF62AD] ">What I do?</h3>
+          <div className="grid items-center gap-8 grid-col grid-flow-row grid-cols-3 max-md:grid-cols-2 max-md:justify-center">
             <Services
               name="Web dev"
               icon="/Code.svg"
@@ -33,10 +33,11 @@ export default function About() {
               name="Desktop app"
               icon="/Windows 10 Personalization.svg"
               desc="About Frontend developpement but I am also a Fullstack Nextjs developper.I have experiences many projects as a freelancing or Project at school"
+              className="col-span-2"
             />
           </div>
         </section>
-        <section className="max-w-[400px]">
+        <section className="max-w-[400px] ">
           <img src="/about-image.png" alt="" />
         </section>
       </main>
