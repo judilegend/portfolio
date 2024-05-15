@@ -3,8 +3,13 @@ import { Button } from "@nextui-org/react";
 const HeroText = () => {
   return (
     <div>
-      <section className="text-white font-semibold  max-w-[750px] max-sm:px-10 max-[1282px]:max-w-[600px]  line-clamps-1">
-        <h1 className="text-[64px] ">Hi <span className="inline-block"><img src="/icons8-agitant-la-main-emoji-48.png" alt="" /></span></h1>
+      <section className="text-white font-semibold  max-w-[750px] max-sm:px-10 max-[1282px]:max-w-[600px] max-md:max-w-[700px]  line-clamps-1">
+        <h1 className="text-[64px] ">
+          Hi{" "}
+          <span className="inline-block">
+            <img src="/icons8-agitant-la-main-emoji-48.png" alt="" />
+          </span>
+        </h1>
         <h2 className="text-5xl max-lg:text-4xl">
           I’m Judi-Legend a{" "}
           <span className="text-[#5DE4F6]"> MERN Stack developper </span>

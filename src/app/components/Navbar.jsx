@@ -82,7 +82,7 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="text-xs lg:flex">
-          <Switch
+          {/* <Switch
             defaultSelected={theme === "dark"} 
             color="success"
             startContent={<SunIcon />}
@@ -90,7 +90,7 @@ export default function App() {
             onChange={handleThemeChange} 
           >
             {theme == "light" ? "Light mode" : "Dark mode"}
-          </Switch>
+          </Switch> */}
         </NavbarItem>
         <NavbarItem>
           <Button

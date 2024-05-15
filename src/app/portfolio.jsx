@@ -16,11 +16,13 @@ export default function Home() {
     <>
       <main className=" max-w-[1250px] mx-auto pt-4 relative">
         <Navbar />
-        <Hero />
+        <div className="max-md:mt-20">
+          <Hero />
+        </div>
         <div className="flex items-center justify-center">
           <About />
         </div>
-        <div className="fixed left-8 bottom-10 z-20">
+        <div className="fixed left-8 bottom-10 z-20 max-sm:left-1">
           <ICons />
         </div>
         <div className="flex items-center justify-center">
