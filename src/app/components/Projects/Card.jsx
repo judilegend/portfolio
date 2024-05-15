@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 const Card = (props) => {
   return (
-    <article className="card_project">
+    <article className="card_project w-[380px] max-sm:w-[330px]">
       <div className="temporary_text">
         <img src={props.capture} alt="photo" className="rounded-lg" />
       </div>
