@@ -3,7 +3,7 @@ import React from "react";
 
 const ICons = () => {
   return (
-    <div className=" flex flex-col items-center gap-5">
+    <div className=" flex flex-col items-center gap-10">
       <div className="share flex flex-col gap-3">
         <button className="btn1">
           <svg
