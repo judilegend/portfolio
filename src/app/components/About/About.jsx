@@ -9,16 +9,19 @@ import { BentoGridThirdDemo } from "./BentoGridThirdDemo";
 import Services from "./Services";
 export default function About() {
   return (
-    <div className="h-[100vh] max-md:h-fit w-full px-10 max-md:px-8 " id="about">
+    <div
+      className="h-[100vh] max-lg:h-fit w-full px-10 max-md:px-8 "
+      id="about"
+    >
       <div className="flex justify-center mt-[100px] 2xl:justify-start ">
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="flex justify-between items-center max-md:flex-col   ">
+      <main className="flex justify-between items-center max-[778px]:flex-col max-md:flex-col">
         <section className="flex flex-col gap-5">
           <AboutText />
           <h3 className="text-3xl text-[#FF62AD] ">What I do?</h3>
-          <div className="grid items-center gap-8 grid-col grid-flow-row grid-cols-3 max-md:grid-cols-2 max-md:justify-center">
+          <div className="flex items-center gap-5  max-lg:flex-wrap max-lg:justify-start max-sm:justify-center">
             <Services
               name="Web dev"
               icon="/Code.svg"

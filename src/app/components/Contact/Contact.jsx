@@ -4,7 +4,10 @@ import Formulaire from "./Formulaire";
 const Contact = () => {
   return (
     <div className=" flex px-4 items-center  relative p-5">
-      <main className="flex flex-row-reverse items-center justify-between">
+      <main className="flex flex-row items-center justify-between max- ">
+        <section>
+          <img src="/Sans titre-2.png" alt="" className="w-[500px]" />
+        </section>
         <section>
           <SimpleTittle name="Contact me" />
           <div className="mt-20 px-8 flex gap-5">
@@ -18,15 +21,12 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <img
-          src="/Ellipse5.svg"
-          alt="bg"
-          className="absolute left-[0px]  max-md:left-[0]  w-full  pt-24 z-[-2222]"
-        />
-        <section>
-          <img src="/Sans titre-2.png" alt="" className="w-[500px]" />
-        </section>
       </main>
+      <img
+        src="/Ellipse5.svg"
+        alt="bg"
+        className="absolute left-[0px]  max-md:left-[0]  w-full  pt-24 z-[-2222]"
+      />
     </div>
   );
 };
