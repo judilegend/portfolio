@@ -11,8 +11,6 @@
   font-family: "MaPolice";
   src: url("./fonts/Roboto-Bold.ttf") format("truetype");
 }
-*{}
-
 body {
   font-family: "MaPolice", sans-serif;
 }

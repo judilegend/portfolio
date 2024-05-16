@@ -18,7 +18,7 @@ import { MoonIcon } from "./Icons/MoonIcon";
 import { Switch } from "@nextui-org/react";
 export default function App() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme("dark");
 
   useEffect(() => {
     setMounted(true);
