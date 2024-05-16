@@ -17,11 +17,12 @@ export default function About() {
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="flex justify-between items-center max-[778px]:flex-col max-md:flex-col">
-        <section className="flex flex-col gap-5">
+      <main className="flex justify-between items-center max-md:flex-col w-full ">
+        {/* left section */}
+        <section className="">
           <AboutText />
           <h3 className="text-3xl text-[#FF62AD] ">What I do?</h3>
-          <div className="flex items-center gap-5  max-lg:flex-wrap max-lg:justify-start max-sm:justify-center">
+          <div className="grid  grid-cols-3 grid-flow-col auto-cols-max items-center  gap-8 max-lg:grid-rows-2 max-sm:gap-x-[200px] ">
             <Services
               name="Web dev"
               icon="/Code.svg"
@@ -36,7 +37,7 @@ export default function About() {
               name="Desktop app"
               icon="/Windows 10 Personalization.svg"
               desc="About Frontend developpement but I am also a Fullstack Nextjs developper.I have experiences many projects as a freelancing or Project at school"
-              className="col-span-2"
+              className="max-md:col-span-2"
             />
           </div>
         </section>

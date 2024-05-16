@@ -19,7 +19,7 @@ export default function Home() {
         <div className="max-md:mt-20">
           <Hero />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <About />
         </div>
         <div className="fixed left-3 bottom-10 z-20 max-sm:left-1 max-xl:left-3">
