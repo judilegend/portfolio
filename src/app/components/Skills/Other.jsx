@@ -2,7 +2,7 @@ import React from "react";
 
 const Other = () => {
   return (
-    <div className=" flex flex-row items-center gap-3 ">
+    <div className=" flex flex-row items-center gap-3 max-lg:flex-col max-lg:items-start">
       <h1>Other </h1>
       <div className="flex flex-wrap gap-3">
         <button className="btn_o">Windows 10</button>
