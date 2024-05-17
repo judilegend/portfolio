@@ -20,7 +20,7 @@ export default function About() {
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="grid gris-cols-2 grid-rows-2 items-center">
+      <main className="grid gris-cols-2 grid-rows-2 grid-flow-row items-center  max-lg:flex max-lg:flex-col max-lg:gap-8">
         <section className="col-span-1">
           <AboutText />
         </section>

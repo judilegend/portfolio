@@ -1,10 +1,10 @@
 import React from "react";
-import Services from "./Services"
+import Services from "./Services";
 const WhatIdo = () => {
   return (
     <div>
       <h3 className="text-3xl text-[#FF62AD] ">What I do?</h3>
-      <div className="grid  grid-cols-3 grid-flow-col auto-cols-max items-center  gap-8 max-lg:grid-rows-2 max-sm:gap-x-[200px] ">
+      <div className="grid w-[600px] grid-cols-3 grid-flow-col auto-cols-max items-center justify-between max-sm:grid-rows-2 max-sm:w-full max-sm:gap-x-44 ">
         <Services
           name="Web dev"
           icon="/Code.svg"
