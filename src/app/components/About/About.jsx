@@ -17,7 +17,7 @@ export default function About() {
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="flex justify-between items-center max-md:flex-col w-full ">
+      <main className=" ">
         {/* left section */}
         <section className="">
           <AboutText />
