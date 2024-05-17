@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutBG = () => {
   return (
-    <div>
+    <div className="">
       <div class=" duration-300  hover:-rotate-0 [transform:rotate3d(1_,-1,_1,_60deg)] group border-sky-900 border-4  overflow-hidden rounded-2xl relative h-52 w-96 bg-sky-800 p-5 flex flex-col items-start gap-4">
         <div class="text-gray-50">
           <span class="font-bold text-5xl">Jr</span>

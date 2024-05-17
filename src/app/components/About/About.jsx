@@ -5,7 +5,6 @@ import { Tittle } from "../Title/Title";
 import AboutImage from "./AboutImage";
 import SimpleTittle from "../Title/SimpleTittle";
 import AboutText from "./AboutText";
-import { BentoGridThirdDemo } from "./BentoGridThirdDemo";
 import WhatIdo from "./WhatIdo";
 import Download from "./Download";
 import AboutBg from "./AboutBG";
@@ -13,7 +12,7 @@ import AboutBg from "./AboutBG";
 export default function About() {
   return (
     <div
-      className="h-[100vh] max-lg:h-fit w-full px-10 max-md:px-8 "
+      className="h-[100vh] max-xl:h-fit w-full px-10 max-md:px-8 "
       id="about"
     >
       <div className="flex justify-center mt-[100px] 2xl:justify-start ">
