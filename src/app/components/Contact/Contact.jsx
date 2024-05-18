@@ -11,7 +11,7 @@ const Contact = () => {
           <img src="/Sans titre-2.png" alt="" className="w-[500px]" />
         </section>
         <section className="">
-          <div className="mt-20 px-8 flex gap-5 justify-center max-md:flex-col max-md:gap-20 ">
+          <div className="mt-20 px-8 flex justify-center  gap-20 max-lg:flex-col max-lg:gap-20 ">
             <div className="max-w-[400px]">
               <h1>Let's work together</h1>
               <p>
