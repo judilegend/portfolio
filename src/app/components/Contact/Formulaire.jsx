@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Formulaire = () => {
   return (
-    <div>
+    <div className="mx-auto">
       <form className="form">
         <ul className="wrapper">
           <li style={{ "--i": 5 }}>

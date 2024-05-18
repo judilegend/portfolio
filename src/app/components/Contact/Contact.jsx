@@ -3,22 +3,23 @@ import SimpleTittle from "../Title/SimpleTittle";
 import Formulaire from "./Formulaire";
 const Contact = () => {
   return (
-    <div className=" flex px-4 items-center  relative p-5">
-      <main className="flex flex-row items-center justify-between max- ">
+    <div className="h-fit flex px-4 items-center justify-center flex-col relative p-5">
+      <SimpleTittle name="Contact me" />
+
+      <main className="flex flex-row items-center  max-md:flex-col mx-auto">
         <section>
           <img src="/Sans titre-2.png" alt="" className="w-[500px]" />
         </section>
-        <section>
-          <SimpleTittle name="Contact me" />
-          <div className="mt-20 px-8 flex gap-5">
-            <Formulaire />
-            <div className="max-w-[300px]">
+        <section className="">
+          <div className="mt-20 px-8 flex gap-5 justify-center max-md:flex-col max-md:gap-20 ">
+            <div className="max-w-[400px]">
               <h1>Let's work together</h1>
               <p>
                 You have a innovate project ,or freelnce projet I'm full free
                 Please contact me.Just send me a feedback
               </p>
             </div>
+            <Formulaire />
           </div>
         </section>
       </main>

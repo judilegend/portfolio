@@ -31,7 +31,7 @@ export default function Home() {
         <div className="flex items-center justify-center ">
           <Projects />
         </div>
-        <div className="flex items-center h-[100vh] overflow-y-hidden">
+        <div className="flex items-center justify-center overflow-y-hidden">
           <Contact />
         </div>
       </main>
