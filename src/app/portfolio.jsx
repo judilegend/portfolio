@@ -14,7 +14,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className=" max-w-[1250px] mx-auto pt-4 relative  dark text-foreground bg-background">
+      <main className=" max-w-[1250px] mx-auto pt-4 relative max-md:overflow-x-hidden dark text-foreground bg-background">
         <Navbar />
         <div className="max-md:mt-20">
           <Hero />
