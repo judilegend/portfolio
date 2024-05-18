@@ -7,7 +7,7 @@ import ToolSkill from "./ToolSkill";
 import Other from "./Other";
 const Skills = () => {
   return (
-    <div className="h-screen max-lg:h-fit max-md:mt-10">
+    <div className="h-fit  max-md:mt-10">
       <div className="text-center ">
         <SimpleTittle name="Skills" />
       </div>
