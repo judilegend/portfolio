@@ -19,13 +19,15 @@ export default function About() {
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="grid gris-cols-2 grid-rows-2 grid-flow-row items-center  max-lg:flex max-lg:flex-col max-lg:gap-8">
-        <section className="col-span-1">
-          <AboutText />
+      <main className="grid gris-cols-2 grid-flow-row items-center  max-lg:flex max-lg:flex-col max-lg:gap-8">
+        <section className="col-span-1 max-w-[600px]">
+          <div className="flex flex-col gap-2">
+            <AboutText />
+            <WhatIdo />
+          </div>
         </section>
-        <section className="col-start-1 row-start-2">
-          <WhatIdo />
-        </section>
+        {/* <section className="col-start-1 row-start-2">
+        </section> */}
         <section className="row-span-2 col-start-2 row-start-1 ">
           <AboutBg />
         </section>
