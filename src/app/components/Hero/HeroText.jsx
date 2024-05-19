@@ -16,9 +16,10 @@ const HeroText = () => {
           and a <span className="text-[#5DE4F6]"> UI/UX Designer </span>
         </h2>
         <p className="mt-5 max-lg:max-w-[400px] ">
-          I’m Judi-Legend a Frontend developper and a UI/UX Designer
+          I'm passionate about JavaScript and deeply enthusiastic about{" "}
+          technology. I'm hardworking and determined{" "}
         </p>
-        <Button className="bg-[#FF62AD] mt-4 w-[200px]">Download CV</Button>
+        <Button className="bg-[#FF62AD] mt-4 w-[200px]">Hiring me?</Button>
         {/* <Button variant="flat" color="#FF62AD" className="text-white">Download CV</Button> */}
       </section>
     </div>
