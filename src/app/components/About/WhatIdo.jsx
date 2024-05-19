@@ -8,17 +8,17 @@ const WhatIdo = () => {
         <Services
           name="Web dev"
           icon="/Code.svg"
-          desc="About Frontend developpement but I am also a Fullstack Nextjs developper.I have experiences many projects as a freelancing or Project at school"
+          desc="About Web developpment , I'm a MERN stack developer and a fullstack Next.js developer. I've worked on many projects as a freelancer and on school projects."
         />
         <Services
-          name="Design UI/UX"
+          name="UI/UX Design"
           icon="/Stack Of Paper.svg"
-          desc="About Frontend developpement but I am also a Fullstack Nextjs developper.I have experiences many projects as a freelancing or Project at school"
+          desc="I’m skilled in UI/UX design and adept with Figma and many other design tools, with a lot of experience in creating designs, showcasing my creativity."
         />
         <Services
-          name="Desktop app"
+          name="Software designer"
           icon="/Windows 10 Personalization.svg"
-          desc="About Frontend developpement but I am also a Fullstack Nextjs developper.I have experiences many projects as a freelancing or Project at school"
+          desc="As a software designer or requirements engineer, I utilize UML and Merise methodologies for conceptualizing software solutions and defining system requirements"
           className="max-md:col-span-2"
         />
       </div>

@@ -14,13 +14,15 @@ export default function AboutText() {
         <h3 className=" font-bold text-2xl max-sm:text-xl ">
           My full name is{" "}
           <span className="text-[#5DE4F6]">
-            TAHIRIMIHAJA Albertinot Judickael
+            TAHIRIMIHAJA Albertinot Judickael ,
           </span>
         </h3>
         <p className="text-lg ">
-          I'm a student at ENI ,L3 GB.I'm My name is Aina Nirina, I am currently
-          a 5th year student at ENI, in the software engineering sector. I'm
-          having basics in backend. Want to know more about me? I invite you to
+          a 3th-year Software Engineering student at ENI. I’m passionate about
+          design and frontend development, especially working with JavaScript. I
+          enjoy tackling challenges. While I’m deeply into frontend right now, I
+          also work hard on backend development. I’m always pushing myself to
+          get better at both.
         </p>
       </div>
     </motion.section>
