@@ -8,7 +8,7 @@ import SimpleTittle from "../Title/SimpleTittle";
 
 const Projects = () => {
   return (
-    <div className="h-fit  w-full flex flex-col items-center gap-10 mt-10  ">
+    <div className="h-fit  w-full flex flex-col items-center gap-10 mt-10" id="project">
       {/* <ImageSlider slides={SliderData} />
       <Carousel /> */}
       <div className="flex justify-start 2xl:justify-start ">

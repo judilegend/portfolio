@@ -3,7 +3,7 @@ import SimpleTittle from "../Title/SimpleTittle";
 import Formulaire from "./Formulaire";
 const Contact = () => {
   return (
-    <div className="h-fit flex px-4 items-center justify-center flex-col relative p-5">
+    <div className="h-fit flex px-4 items-center justify-center flex-col relative p-5" id="contact">
       <SimpleTittle name="Contact me" />
 
       <main className="flex flex-row items-center  max-md:flex-col mx-auto">
