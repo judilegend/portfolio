@@ -19,6 +19,10 @@ import { Switch } from "@nextui-org/react";
 export default function App() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [activeLink, setActiveLink] = useState("#hero");
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -50,6 +54,7 @@ export default function App() {
           "data-[active=true]:after:h-[2px]",
           "data-[active=true]:after:rounded-[2px]",
           "data-[active=true]:after:bg-primary",
+          "data-[active=true]:text-blue-500",
         ],
         root: "px-0", // Remplacez px-6 par px-0
       }}
@@ -59,23 +64,52 @@ export default function App() {
         <Image src="/logo.png" alt="logo" width={120} height={120} />{" "}
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-10" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#" className="text-white">
+        <NavbarItem isActive={activeLink === "#hero"}>
+          <Link
+            color="foreground"
+            href="#hero"
+            className={activeLink === "#hero" ? "text-[#5DE4F6]" : "text-white"}
+            onClick={() => handleLinkClick("#hero")}
+          >
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+        <NavbarItem isActive={activeLink === "#about"}>
+          <Link
+            href="#about"
+            aria-current="page"
+            className={
+              activeLink === "#about" ? "text-[#5DE4F6]" : "text-white"
+            }
+            onClick={() => handleLinkClick("#about")}
+          >
             About me
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="text-white">
+        <NavbarItem isActive={activeLink === "#skills"}>
+          <Link
+            color="foreground"
+            href="#skills"
+            className={
+              activeLink === "#skills" ? "text-[#5DE4F6]" : "text-white"
+            }
+            onClick={() => handleLinkClick("#skills")}
+          >
             Skills
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="text-white">
+        <NavbarItem isActive={activeLink === "#project"}>
+          {/* {isActive } */}
+
+          <Link
+            // color="foreground"
+            href="#project"
+            aria-current="page"
+            className={
+              activeLink === "#project" ? "text-[#5DE4F6]" : "text-white"
+            }
+            onClick={() => handleLinkClick("#project")}
+          >
             Projects
           </Link>
         </NavbarItem>
@@ -96,9 +130,10 @@ export default function App() {
           <Button
             as={Link}
             color="primary"
-            href="#"
+            href="#contact"
             variant="flat"
             className="bg-secondary text-red"
+            onClick={() => handleLinkClick("#contact")}
           >
             Contact me
           </Button>
