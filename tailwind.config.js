@@ -37,6 +37,7 @@ module.exports = {
               foreground: "#FFFFFF",
             },
             focus: "#BEF264",
+            background: "#0E0D0D", // Modifier la couleur de fond ici
           },
         },
       },

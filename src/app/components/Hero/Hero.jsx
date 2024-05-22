@@ -7,9 +7,12 @@ import Icons from "./ICons";
 export default function Hero() {
   return (
     <>
-      <main id="hero" className="px-8 flex relative z-20 justify-between w-full max-md:px-20 max-md:flex-col max-md:gap-10 max-sm:gap-20 max-sm:px-0 items-center h-[95vh] max-md:h-fit">
+      <main
+        id="hero"
+        className="px-8 flex relative z-20 justify-between w-full max-md:px-20 max-md:flex-col max-md:gap-10 max-sm:gap-20 max-sm:px-0 items-center h-[95vh] max-md:h-fit"
+      >
         <HeroText />
-        <section className="card  bg-black h-fit max-lg:w-[300px] w-[300px] flex items-center justify-center">
+        <section className="card  bg-[#0E0D0D] h-fit max-lg:w-[300px] w-[300px] flex items-center justify-center">
           <div className="">
             <img
               alt="Hero image"

@@ -8,10 +8,10 @@ import SimpleTittle from "../Title/SimpleTittle";
 
 const Projects = () => {
   return (
-    <div className="h-fit  w-full flex flex-col items-center gap-10 mt-10" id="project">
+    <div className="mt-[55px]   w-full flex flex-col items-center gap-10 ">
       {/* <ImageSlider slides={SliderData} />
       <Carousel /> */}
-      <div className="flex justify-start 2xl:justify-start ">
+      <div className="flex justify-start 2xl:justify-start">
         {/* <Tittle /> */}
         <SimpleTittle name="My last Project" />
       </div>

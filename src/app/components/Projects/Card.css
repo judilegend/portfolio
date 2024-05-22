@@ -58,7 +58,7 @@
 .card_description {
   font-size: 14px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 .card_project:hover .card_content {
