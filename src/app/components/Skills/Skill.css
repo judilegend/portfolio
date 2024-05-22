@@ -11,7 +11,7 @@
 .btn {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #000;
+  background-color: #0E0D0D;
   border: 3px solid yellow;
   border-radius: 1em;
   color: #fff;
@@ -22,7 +22,7 @@
 .btn_s {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #000;
+  background-color: #0E0D0D;
   border: 3px solid #5de4f6;
   border-radius: 1em;
   color: #fff;
@@ -33,7 +33,7 @@
 .btn_t {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #000;
+  background-color: #0E0D0D;
   border: 3px solid #ff62ad;
   border-radius: 1em;
   color: #fff;
@@ -44,7 +44,7 @@
 .btn_o {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #000;
+  background-color: #0E0D0D;
   border: 3px solid #63e26c;
   border-radius: 1em;
   color: #fff;

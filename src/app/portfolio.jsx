@@ -19,16 +19,25 @@ export default function Home() {
         <div className="max-md:mt-20">
           <Hero />
         </div>
-        <div className="flex items-center justify-center ">
+        <div
+          className="flex items-center justify-center h-screen max-md:h-fit "
+          id="about"
+        >
           <About />
         </div>
         <div className="fixed left-3 bottom-10 z-20 max-sm:left-1 max-xl:left-3">
           <ICons />
         </div>
-        <div className="flex items-center justify-center ">
+        <div
+          className="flex items-center justify-center h-screen max-2xl:h-fit"
+          id="skills"
+        >
           <Skills />
         </div>
-        <div className="flex items-center justify-center ">
+        <div
+          className="flex items-center justify-center h-screen max-2xl:h-fit"
+          id="project"
+        >
           <Projects />
         </div>
         <div className="flex items-center justify-center overflow-y-hidden">

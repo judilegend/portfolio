@@ -4,7 +4,7 @@ const WhatIdo = () => {
   return (
     <div className=" ">
       <h3 className="text-3xl text-[#FF62AD] w- ">What I do?</h3>
-      <div className="flex justify-between max-md:flex-wrap ">
+      <div className="flex justify-between max-md:flex-wrap  ">
         <Services
           name="Web dev"
           icon="/Code.svg"

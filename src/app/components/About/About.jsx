@@ -12,10 +12,9 @@ import AboutBg from "./AboutBG";
 export default function About() {
   return (
     <div
-      className="h-[100vh] max-xl:h-fit w-full px-10 max-md:px-8 "
-      id="about"
+      className="max-xl:h-fit w-full px-10 max-md:px-8 "
     >
-      <div className="flex justify-center mt-[100px] 2xl:justify-start ">
+      <div className="flex justify-center mt-[20px] 2xl:justify-start ">
         {/* <Tittle /> */}
         <SimpleTittle name="About me ?" />
       </div>
