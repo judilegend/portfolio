@@ -161,14 +161,19 @@ export default function App() {
             {theme == "light" ? "Light mode" : "Dark mode"}
           </Switch> */}
         </NavbarItem>
-        <NavbarItem className="justify-end">
+        <NavbarItem className="">
           <Button
             as={Link}
             color="primary"
             href="#contact"
             variant="flat"
             className="bg-secondary text-red"
-            onClick={() => handleLinkClick("#contact")}
+            // onClick={() => {
+            //   handleLinkClick("#contact");
+            //   setIsMenuOpen(false);
+
+            // }}
+            onClick={() => setIsMenuOpen(false)}
           >
             Contact me
           </Button>
