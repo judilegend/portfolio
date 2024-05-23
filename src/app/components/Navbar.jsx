@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import {
   Navbar,
@@ -10,16 +10,46 @@ import {
   NavbarItem,
   Link,
   Button,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/react";
 import Image from "next/image";
 // import { AcmeLogo } from "./AcmeLogo.jsx";
 import { SunIcon } from "./Icons/SunIcon";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { Switch } from "@nextui-org/react";
+export const menuItems = [
+  {
+    name: "Home",
+    to: "hero",
+  },
+  {
+    name: "About me",
+    to: "about",
+  },
+  {
+    name: "Skills",
+    to: "skills",
+  },
+  {
+    name: "Project",
+    to: "project",
+  },
+];
 export default function App() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const [activeLink, setActiveLink] = useState("#hero");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const toggle = () => {
+    menu.current.click();
+  };
+  const menu = useRef(null);
+  // useEffect(() => {
+  //   setIsMenuOpen(false);
+  // }, [isMenuOpen]);
+
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -39,6 +69,8 @@ export default function App() {
       maxWidth="xl"
       id="nav"
       style={{ padding: 0 }}
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
       classNames={{
         item: [
           "flex",
@@ -61,7 +93,10 @@ export default function App() {
     >
       <NavbarBrand>
         {/* <AcmeLogo /> */}
-        <Image src="/logo.png" alt="logo" width={120} height={120} />{" "}
+
+        <NavbarContent justify="start">
+          <Image src="/logo.png" alt="logo" width={120} height={120} />
+        </NavbarContent>
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-10" justify="center">
         <NavbarItem isActive={activeLink === "#hero"}>
@@ -126,7 +161,7 @@ export default function App() {
             {theme == "light" ? "Light mode" : "Dark mode"}
           </Switch> */}
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="justify-end">
           <Button
             as={Link}
             color="primary"
@@ -138,6 +173,37 @@ export default function App() {
             Contact me
           </Button>
         </NavbarItem>
+        <NavbarContent className="md:hidden" justify="">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            onChange={(isMenuOpen) => console.log(isMenuOpen)}
+            ref={menu}
+          />
+        </NavbarContent>
+        <NavbarMenu className="px-8">
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem
+              onClick={() => setIsMenuOpen(false)}
+              key={`${item}-${index}`}
+            >
+              <Link
+                className="w-full hover:cursor-pointer  "
+                href={`#${item.to}`}
+                onClick={() => toggle()}
+                color={
+                  index === 1
+                    ? ""
+                    : index === menuItems.length - 1
+                    ? "warning"
+                    : ""
+                }
+                size="lg"
+              >
+                {item.name}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </NavbarContent>
     </Navbar>
   );
