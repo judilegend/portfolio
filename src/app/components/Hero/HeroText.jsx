@@ -13,9 +13,9 @@ const HeroText = () => {
             <img src="/icons8-agitant-la-main-emoji-48.png" alt="" />
           </span>
         </h1>
-        <h2 className="text-5xl max-lg:text-4xl">
+        <h2 className="text-5xl max-lg:text-4xl  h-[80px]">
           I’m Judi-Legend a{" "}
-          <span className="text-[#5DE4F6] h-[200px]">
+          <span className="text-[#5DE4F6]">
             {" "}
             {/* MERN Stack developper */}
             {/* Style will be inherited from the parent element */}
