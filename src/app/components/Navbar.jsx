@@ -3,12 +3,13 @@
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
+import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
+
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -19,6 +20,7 @@ import Image from "next/image";
 import { SunIcon } from "./Icons/SunIcon";
 import { MoonIcon } from "./Icons/MoonIcon";
 import { Switch } from "@nextui-org/react";
+
 export const menuItems = [
   {
     name: "Home",
@@ -33,35 +35,49 @@ export const menuItems = [
     to: "skills",
   },
   {
-    name: "Project",
+    name: "Projects",
     to: "project",
   },
 ];
+
 export default function App() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [activeLink, setActiveLink] = useState("#hero");
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [activeLink, setActiveLink] = useState("hero");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggle = () => {
     menu.current.click();
   };
   const menu = useRef(null);
-  // useEffect(() => {
-  //   setIsMenuOpen(false);
-  // }, [isMenuOpen]);
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
 
   useEffect(() => {
     setMounted(true);
+
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function () {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
   }, []);
 
   if (!mounted) return null;
+
   const handleThemeChange = () => {
-    // Inversez le thème actuel lors du changement du commutateur
     setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const handleSetActive = (to) => {
+    setActiveLink(to);
   };
 
   return (
@@ -75,7 +91,6 @@ export default function App() {
         item: [
           "flex",
           "relative",
-          // 'bg-transparent',
           "h-full",
           "items-center",
           "data-[active=true]:after:content-['']",
@@ -88,66 +103,32 @@ export default function App() {
           "data-[active=true]:after:bg-primary",
           "data-[active=true]:text-blue-500",
         ],
-        root: "px-0", // Remplacez px-6 par px-0
+        root: "px-0",
       }}
     >
       <NavbarBrand>
-        {/* <AcmeLogo /> */}
-
         <NavbarContent justify="start">
           <Image src="/logo.png" alt="logo" width={120} height={120} />
         </NavbarContent>
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-10" justify="center">
-        <NavbarItem isActive={activeLink === "#hero"}>
-          <Link
-            color="foreground"
-            href="#hero"
-            className={activeLink === "#hero" ? "text-[#5DE4F6]" : "text-white"}
-            onClick={() => handleLinkClick("#hero")}
-          >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "#about"}>
-          <Link
-            href="#about"
-            aria-current="page"
-            className={
-              activeLink === "#about" ? "text-[#5DE4F6]" : "text-white"
-            }
-            onClick={() => handleLinkClick("#about")}
-          >
-            About me
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "#skills"}>
-          <Link
-            color="foreground"
-            href="#skills"
-            className={
-              activeLink === "#skills" ? "text-[#5DE4F6]" : "text-white"
-            }
-            onClick={() => handleLinkClick("#skills")}
-          >
-            Skills
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={activeLink === "#project"}>
-          {/* {isActive } */}
-
-          <Link
-            // color="foreground"
-            href="#project"
-            aria-current="page"
-            className={
-              activeLink === "#project" ? "text-[#5DE4F6]" : "text-white"
-            }
-            onClick={() => handleLinkClick("#project")}
-          >
-            Projects
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item) => (
+          <NavbarItem key={item.to} isActive={activeLink === item.to}>
+            <ScrollLink
+              to={item.to}
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className={
+                activeLink === item.to ? "text-[#5DE4F6]" : "text-white"
+              }
+              onSetActive={handleSetActive}
+            >
+              {item.name}
+            </ScrollLink>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="text-xs lg:flex">
@@ -163,16 +144,13 @@ export default function App() {
         </NavbarItem>
         <NavbarItem className="">
           <Button
-            as={Link}
+            as={ScrollLink}
             color="primary"
-            href="#contact"
-            variant="flat"
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
             className="bg-secondary text-red"
-            // onClick={() => {
-            //   handleLinkClick("#contact");
-            //   setIsMenuOpen(false);
-
-            // }}
             onClick={() => setIsMenuOpen(false)}
           >
             Contact me
@@ -191,21 +169,17 @@ export default function App() {
               onClick={() => setIsMenuOpen(false)}
               key={`${item}-${index}`}
             >
-              <Link
-                className="w-full hover:cursor-pointer  "
-                href={`#${item.to}`}
+              <ScrollLink
+                className="w-full hover:cursor-pointer"
+                to={item.to}
+                spy={true}
+                smooth={true}
+                duration={500}
                 onClick={() => toggle()}
-                color={
-                  index === 1
-                    ? ""
-                    : index === menuItems.length - 1
-                    ? "warning"
-                    : ""
-                }
-                size="lg"
+                onSetActive={handleSetActive}
               >
                 {item.name}
-              </Link>
+              </ScrollLink>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
