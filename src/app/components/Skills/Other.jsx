@@ -7,7 +7,7 @@ const Other = () => {
       <div className="flex flex-wrap gap-3">
         <button className="btn_o">Windows 10</button>
         <button className="btn_o">Windows 11</button>
-        <button className="btn_o">Debian 11.0.6</button>
+        <button className="btn_o">Debian </button>
         <button className="btn_o">Ubuntu</button>
       </div>
     </div>

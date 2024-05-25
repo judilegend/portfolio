@@ -15,7 +15,7 @@ const HeroText = () => {
         </h1>
         <h2 className="text-5xl max-lg:text-4xl">
           I’m Judi-Legend a{" "}
-          <span className="text-[#5DE4F6]">
+          <span className="text-[#5DE4F6] h-[200px]">
             {" "}
             {/* MERN Stack developper */}
             {/* Style will be inherited from the parent element */}

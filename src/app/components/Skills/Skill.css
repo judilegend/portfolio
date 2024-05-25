@@ -11,18 +11,18 @@
 .btn {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #0E0D0D;
-  border: 3px solid yellow;
+  background-color: #0e0d0d;
+  border: 3px solid #ff62ad;
   border-radius: 1em;
   color: #fff;
   font-weight: bolder;
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-  box-shadow: -5px 5px 0px 0px yellow;
+  box-shadow: -5px 5px 0px 0px #ff62ad;
 }
 .btn_s {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #0E0D0D;
+  background-color: #0e0d0d;
   border: 3px solid #5de4f6;
   border-radius: 1em;
   color: #fff;
@@ -33,7 +33,7 @@
 .btn_t {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #0E0D0D;
+  background-color: #0e0d0d;
   border: 3px solid #ff62ad;
   border-radius: 1em;
   color: #fff;
@@ -44,13 +44,13 @@
 .btn_o {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #0E0D0D;
-  border: 3px solid #63e26c;
+  background-color: #0e0d0d;
+  border: 3px solid #5de4f6;
   border-radius: 1em;
   color: #fff;
   font-weight: bolder;
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-  box-shadow: -5px 5px 0px 0px #63e26c;
+  box-shadow: -5px 5px 0px 0px #5de4f6;
 }
 .btn:hover,
 .btn_s:hover,

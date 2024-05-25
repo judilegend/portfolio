@@ -35,7 +35,7 @@
   /* width: 300px; */
   /* height: 310px; */
   border-radius: 10px;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  background: linear-gradient(-45deg, #ff62ad 0%, #40c9ff 100%);
   z-index: -10;
   pointer-events: none;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -66,13 +66,13 @@
   font-weight: 600;
 }
 
-.card:hover::after {
+/* .card:hover::after {
   filter: blur(30px);
 }
 
 .card:hover::before {
   transform: rotate(-80deg) scaleX(0.85) scaleY(0.9);
-}
+} */
 
 .pattern {
   width: 100%;
