@@ -13,7 +13,7 @@ const HeroText = () => {
             <img src="/icons8-agitant-la-main-emoji-48.png" alt="" />
           </span>
         </h1>
-        <h2 className="text-5xl max-lg:text-4xl  h-[80px]">
+        <h2 className="text-5xl max-lg:text-4xl  h-[80px] max-md:h-[100px]">
           I’m Judi-Legend a{" "}
           <span className="text-[#5DE4F6]">
             {" "}
