@@ -3,7 +3,7 @@ import React from "react";
 const AboutBG = () => {
   return (
     <div className="">
-      <div class=" duration-300  hover:-rotate-0 [transform:rotate3d(1_,-1,_1,_60deg)] group border-sky-900 border-4  overflow-hidden rounded-2xl relative h-52 w-80 max-sm:w- bg-sky-800 p-5 flex flex-col items-start gap-4">
+      <div class=" duration-300  hover:-rotate-0 [transform:rotate3d(1_,-1,_1,_60deg)] group border-sky-900 border-4  overflow-hidden rounded-2xl relative h-52 w-90 max-xl:w-80 max-sm:w- bg-sky-800 p-5 flex flex-col items-start gap-4">
         <div class="text-gray-50">
           <span class="font-bold text-5xl">Jr</span>
           <p class="text-xs">Frontend </p>
@@ -28,7 +28,6 @@ const AboutBG = () => {
             </svg>
           </button>
         </a>
-
         <svg
           viewBox="0 0 64 64"
           xmlns="http://www.w3.org/2000/svg"

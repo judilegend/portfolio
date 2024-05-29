@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/react";
 const HeroText = () => {
   return (
     <div>
-      <section className="text-white font-semibold  max-w-[750px] max-sm:px-8 max-[1282px]:max-w-[600px] max-md:max-w-[700px]  line-clamps-1">
+      <section className="text-white font-semibold  max-w-[700px] max-sm:px-8  max-xl:max-w-[680px] max-lg:max-w-[400px] line-clamps-1">
         <h1 className="text-[64px] max-md:text-[58px] ">
           Hi{" "}
           <span className="inline-block">
@@ -39,7 +39,7 @@ const HeroText = () => {
           </span>
           {/* and a <span className="text-[#5DE4F6]">  </span> */}
         </h2>
-        <p className="mt-5 max-lg:max-w-[400px] ">
+        <p className="mt-5 max-lg:max-w-[400px] max-w-[500px] ">
           I'm passionate about JavaScript and deeply enthusiastic about{" "}
           technology. I'm hardworking and determined{" "}
         </p>

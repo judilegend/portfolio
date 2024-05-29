@@ -4,10 +4,10 @@ import Formulaire from "./Formulaire";
 const Contact = () => {
   return (
     <div
-      className="h-fit flex px-4 items-center justify-center flex-col relative p-5"
+      className="h-fit flex px-4 items-center justify-center flex-col 2xl:mt-20 relative p-5"
       id="contact"
     >
-      <SimpleTittle name="Contact me"  />
+      <SimpleTittle name="Contact me" />
 
       <main className="flex flex-row items-center  max-md:flex-col mx-auto">
         <section>
