@@ -40,7 +40,7 @@ export default function Home() {
         >
           <Projects />
         </div>
-        <div className="flex items-center justify-center overflow-y-hidden">
+        <div className="flex items-center justify-center h-fit overflow-y-hidden">
           <Contact />
         </div>
       </main>

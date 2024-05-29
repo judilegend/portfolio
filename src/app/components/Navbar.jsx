@@ -113,7 +113,11 @@ export default function App() {
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-10" justify="center">
         {menuItems.map((item) => (
-          <NavbarItem key={item.to} isActive={activeLink === item.to}>
+          <NavbarItem
+            key={item.to}
+            isActive={activeLink === item.to}
+            className="hover:cursor-pointer"
+          >
             <ScrollLink
               to={item.to}
               spy={true}
