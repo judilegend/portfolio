@@ -11,20 +11,35 @@ const Formulaire = () => {
     formState: { errors },
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
-  const onSubmit = async (field) => {
+
+  const onSubmit = async (data) => {
     setIsLoading(true);
-    const { status } = await axios.post("/api", field);
-    if (status === 200) {
-      toast("Vous devrez recevoir un email si ", {
-        icon: "👏",
+    try {
+      const response = await axios.post("/api/", data);
+      if (response.status === 200) {
+        toast("Vous devrez recevoir un email si ", {
+          icon: "👏",
+          duration: 5000,
+        });
+      } else {
+        toast("Échec de l'envoi de l'email", {
+          icon: "😞",
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast("Une erreur s'est produite", {
+        icon: "😞",
         duration: 5000,
       });
     }
     setIsLoading(false);
   };
+
   return (
     <div className="mx-auto">
-      <form onSubmit={handleSubmit((data) => onSubmit(data))} className="form">
+      <form onSubmit={handleSubmit(onSubmit)} className="form">
         <Toaster
           toastOptions={{
             style: {
@@ -41,25 +56,22 @@ const Formulaire = () => {
               className="input"
               type="text"
               placeholder="Object"
-              required={true}
-              {...register("object")}
+              {...register("object", { required: true })}
             />
           </li>
           <li style={{ "--i": 4 }}>
             <input
               className="input"
               type="text"
-              {...register("name")}
               placeholder="Name"
-              required={true}
+              {...register("name", { required: true })}
             />
           </li>
           <li style={{ "--i": 3 }}>
             <input
               className="input"
               placeholder="Phone number"
-              {...register("phone")}
-              required={true}
+              {...register("phone", { required: true })}
               name="phone"
             />
           </li>
@@ -68,18 +80,17 @@ const Formulaire = () => {
               className="input"
               type="email"
               placeholder="E-mail"
-              required={true}
               name="email"
-              {...register("email")}
+              {...register("email", { required: true })}
             />
           </li>
           <button
             style={{ "--i": 1 }}
             className="btn_form"
-            isLoading={isLoading}
             type="submit"
+            disabled={isLoading}
           >
-            Submit
+            {isLoading ? "Sending..." : "Submit"}
           </button>
         </ul>
       </form>
