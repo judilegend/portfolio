@@ -1,39 +1,33 @@
-import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    console.log("Request body:", body);
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    const { to, subject, text } = req.body;
 
-    let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465, // utilisez 587 si vous souhaitez utiliser TLS
-      secure: true, // true pour SSL, false pour TLS
+    // Configurez votre transporteur SMTP
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
       auth: {
-        user: "judilegend2@gmail.com",
+        user: "albertinot2422@gmail.com",
         pass: "bklkgctynyvejnvj",
       },
     });
 
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER, // sender address
-      to: body.email, // list of receivers
-      subject: `Bonjour ${body.nom}`, // Subject line
-      text: "Email bien reçu", // plain text body
-      // html: "<b>Hello world?</b>", // html body
-    });
+    try {
+      // Envoyez l'email
+      await transporter.sendMail({
+        from: '"albert tinot" <albertinot2422@gmail.com>', // Remplacez par votre nom et email
+        to: to,
+        subject: subject,
+        text: text,
+      });
 
-    console.log("Email sent:", info.messageId);
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json(
-      { message: "Error sending email", error: error.message },
-      { status: 500 }
-    );
+      res.status(200).json({ message: "Email sent successfully!" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Error sending email" });
+    }
+  } else {
+    res.status(405).json({ message: "Method not allowed" });
   }
 }

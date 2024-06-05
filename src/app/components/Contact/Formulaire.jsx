@@ -17,7 +17,7 @@ const Formulaire = () => {
     try {
       const response = await axios.post("/api/", data);
       if (response.status === 200) {
-        toast("Vous devrez recevoir un email si ", {
+        toast("email bien recu", {
           icon: "👏",
           duration: 5000,
         });
