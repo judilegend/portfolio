@@ -11,8 +11,8 @@ export async function POST(request: NextRequest) {
       port: 465, // utilisez 587 si vous souhaitez utiliser TLS
       secure: true, // true pour SSL, false pour TLS
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: "judilegend2@gmail.com",
+        pass: "bklkgctynyvejnvj",
       },
     });
 
