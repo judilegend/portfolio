@@ -15,7 +15,7 @@ const Formulaire = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await axios.post("/api/", data);
+      const response = await axios.post("/api/sendEmail", data);
       if (response.status === 200) {
         toast("email bien recu", {
           icon: "👏",
