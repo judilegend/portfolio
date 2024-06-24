@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className="h-screen dark text-foreground bg-background ">
+      <body className="h-screen  text-foreground bg-[#0E0D0D]">
         <Providers theme="dark">{children}</Providers>
       </body>
     </html>

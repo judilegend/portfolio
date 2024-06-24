@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-[#0E0D0D]">
       {isLoading ? (
         <Loading /> // Afficher l'animation de chargement si isLoading est vrai
       ) : (
