@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import toast from 'react-hot-toast';
-import './Contact.css';
+import React, { useState } from "react";
+import "./Contact.css";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
 
 const Formulaire = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data) => {
@@ -13,7 +17,7 @@ const Formulaire = () => {
     try {
       const response = await axios.post("/api/sendEmail", data);
       if (response.status === 200) {
-        toast("Email bien reçu", {
+        toast("email bien recu", {
           icon: "👏",
           duration: 5000,
         });
@@ -34,14 +38,63 @@ const Formulaire = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="email" {...register("to")} placeholder="Recipient's email" required />
-      <input type="text" {...register("subject")} placeholder="Subject" required />
-      <textarea {...register("text")} placeholder="Message" required></textarea>
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? 'Sending...' : 'Send Email'}
-      </button>
-    </form>
+    <div className="mx-auto">
+      <form onSubmit={handleSubmit(onSubmit)} className="form">
+        <Toaster
+          toastOptions={{
+            style: {
+              background: "#363636",
+              color: "#fff",
+              fontSize: "16px",
+              fontWeight: 400,
+            },
+          }}
+        />
+        <ul className="wrapper">
+          <li style={{ "--i": 5 }}>
+            <input
+              className="input"
+              type="text"
+              placeholder="Object"
+              {...register("object", { required: true })}
+            />
+          </li>
+          <li style={{ "--i": 4 }}>
+            <input
+              className="input"
+              type="text"
+              placeholder="Name"
+              {...register("name", { required: true })}
+            />
+          </li>
+          <li style={{ "--i": 3 }}>
+            <input
+              className="input"
+              placeholder="Phone number"
+              {...register("phone", { required: true })}
+              name="phone"
+            />
+          </li>
+          <li style={{ "--i": 2 }}>
+            <input
+              className="input"
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              {...register("email", { required: true })}
+            />
+          </li>
+          <button
+            style={{ "--i": 1 }}
+            className="btn_form"
+            type="submit"
+            disabled={isLoading}
+          >
+            {isLoading ? "Sending..." : "Submit"}
+          </button>
+        </ul>
+      </form>
+    </div>
   );
 };
 
