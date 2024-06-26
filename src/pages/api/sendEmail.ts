@@ -21,6 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         to: to,
         subject: subject,
         text: text,
+
+        
       });
 
       res.status(200).json({ message: 'Email sent successfully!' });
