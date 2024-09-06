@@ -1,19 +1,17 @@
 import { useTheme } from "next-themes";
 import "./globals.css";
-
+import CustomCursor from "./components/CustomCursor"
 export const metadata = {
   title: "Home Page",
   description: "Portfolio",
 };
-import { Providers } from "./providers";
 
 export default function RootLayout({ children }) {
-  // const { theme, setTheme } = useTheme("dark");
-
   return (
     <html lang="en">
-      <body className="h-screen  text-foreground bg-[#0E0D0D]">
-        <Providers theme="dark">{children}</Providers>
+      <body>
+        {children}
+        <CustomCursor />
       </body>
     </html>
   );

@@ -16,21 +16,23 @@ const Formulaire = () => {
     setIsLoading(true);
     try {
       const response = await axios.post("/api/sendEmail", data);
+      console.log(response);
+
       if (response.status === 200) {
         toast("email bien recu", {
           icon: "👏",
           duration: 5000,
         });
       } else {
-        toast("Échec de l'envoi de l'email", {
+        toast("Email en production , veillez ressayer plus tard", {
           icon: "😞",
           duration: 5000,
         });
       }
     } catch (error) {
       console.error("Error:", error);
-      toast("Une erreur s'est produite", {
-        icon: "😞",
+      toast("Email en production , veillez ressayer plus tard", {
+        icon: "✨",
         duration: 5000,
       });
     }

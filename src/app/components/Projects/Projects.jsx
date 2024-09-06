@@ -25,6 +25,7 @@ const Projects = () => {
           desc="/tailwind.svg"
           desc2="/ts.svg"
           desc1="/next.svg"
+          git="https://github.com/judilegend/Edt.git"
         />
         <Card
           capture="/assets/foodapp.png"
@@ -35,6 +36,8 @@ const Projects = () => {
           desc="/css.svg"
           desc2="/js.svg"
           desc1="/react.svg"
+          git="https://github.com/judilegend/Food-app.git"
+          demo="https://food-app24.vercel.app/"
         />
         <Card
           capture="/assets/gcoms.png"
@@ -45,6 +48,7 @@ const Projects = () => {
           desc="/css.svg"
           desc2="/js.svg"
           desc1="/react.svg"
+          git="https://github.com/judilegend/Gcoms.git"
         />
 
         <Card
@@ -56,6 +60,7 @@ const Projects = () => {
           desc="/tailwind.svg"
           desc2="/js.svg"
           desc1="/react.svg"
+          demo="https://andonirina2.vercel.app/"
         />
       </div>
     </div>

@@ -14,6 +14,73 @@
 body {
   font-family: "MaPolice", sans-serif;
 }
+
+* {
+  cursor: none !important;
+}
+
+a, button, input, textarea, select {
+  cursor: none !important;
+}
+
+.water-bubble {
+  pointer-events: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 70%);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease;
+  animation: bubbleFloat 3s infinite alternate;
+}
+
+.water-bubble::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 30%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.water-bubble.hover {
+  transform: scale(1.5);
+}
+
+.bubble-inner {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  animation: bubbleInner 2s infinite alternate;
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes bubbleInner {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}.navbar *, .form * {
+  cursor: none !important;
+}
 #nav {
   background: transparent;
   position: fixed;
@@ -252,4 +319,30 @@ header {
     stroke-width: 20;
     stroke-dashoffset: -440;
   }
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+}
+
+.custom-cursor.hover {
+  transform: scale(1.5);
 }

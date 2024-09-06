@@ -1,34 +1,31 @@
-/** @format */
 "use client";
-import "../../style.css";
-import { Tittle } from "../Title/Title";
-import AboutImage from "./AboutImage";
+import { memo } from "react";
 import SimpleTittle from "../Title/SimpleTittle";
 import AboutText from "./AboutText";
 import WhatIdo from "./WhatIdo";
-import Download from "./Download";
 import AboutBg from "./AboutBG";
 
-export default function About() {
+const About = memo(() => {
   return (
     <div className="max-xl:h-fit w-full px-8 2xl:px-6">
-      <div className="flex justify-center mt-[20px] 2xl:justify-start ">
-        {/* <Tittle /> */}
+      <div className="flex justify-center mt-5 2xl:justify-start">
         <SimpleTittle name="About me ?" />
       </div>
-      <main className="grid gris-cols-2 grid-flow-row items-center  max-lg:flex max-lg:flex-col max-lg:gap-8">
-        <section className="col-span-1  ">
-          <div className="flex flex-col gap-2 max-w-[610px]">
+      <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <section>
+          <div className="flex flex-col gap-2 max-w-[710px]">
             <AboutText />
             <WhatIdo />
           </div>
         </section>
-        {/* <section className="col-start-1 row-start-2">
-        </section> */}
-        <section className="row-span-2 col-start-2 row-start-1 ">
+        <section className="lg:row-span-2">
           <AboutBg />
         </section>
       </main>
     </div>
   );
-}
+});
+
+About.displayName = "About";
+
+export default About;
