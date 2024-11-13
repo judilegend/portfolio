@@ -37,7 +37,7 @@ const Projects = () => {
           desc2="/js.svg"
           desc1="/react.svg"
           git="https://github.com/judilegend/Food-app.git"
-          demo="https://food-app24.vercel.app/"
+          // demo="https://food-app24.vercel.app/"
         />
         <Card
           capture="/assets/gcoms.png"
@@ -60,7 +60,7 @@ const Projects = () => {
           desc="/tailwind.svg"
           desc2="/js.svg"
           desc1="/react.svg"
-          demo="https://andonirina2.vercel.app/"
+          // demo="https://andonirina2.vercel.app/"
         />
       </div>
     </div>
