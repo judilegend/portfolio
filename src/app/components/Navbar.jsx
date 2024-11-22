@@ -84,7 +84,7 @@ export default function App() {
     <Navbar
       maxWidth="xl"
       id="nav"
-      style={{ padding: 0 }}
+      style={{ padding: 0, zIndex: 9999 }} // Ajout du z-index ici
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
