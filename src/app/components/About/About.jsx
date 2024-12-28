@@ -6,7 +6,7 @@ import WhatIdo from "./WhatIdo";
 
 const About = memo(() => {
   return (
-    <div className="relative min-h-screen w-full px-4 md:px- py-8">
+    <div className="relative min-h-screen w-full px-4 max-md:px-0 py-8">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF62AD] opacity-10 rounded-full blur-[120px]" />
