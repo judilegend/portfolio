@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/space-grotesk";
+@import "@fontsource/inter";
 
 @layer utilities {
   .text-balance {
