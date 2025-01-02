@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/react";
 const HeroText = () => {
   return (
     <div>
-      <section className="text-white font-semibold  max-w-[700px] max-sm:px-8  max-xl:max-w-[680px] max-lg:max-w-[400px] line-clamps-1">
+      <section className="text-white font-semibold  max-w-[700px] max-sm:px-0  max-xl:max-w-[680px] max-lg:max-w-[400px] line-clamps-1">
         <h1 className="text-[64px] max-md:text-[58px] ">
           Hi{" "}
           <span className="inline-block">
@@ -24,8 +24,8 @@ const HeroText = () => {
                 "MERN Stack developper",
                 // "Inspire Creativity , Passionate about Frontend!",
 
-                "UI/UX Designer",
-                "JavaScript Devotee",
+                "Mobile App Developer",
+                "UI/UX Designer Passionate",
               ]}
               loop={Infinity}
               cursor

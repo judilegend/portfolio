@@ -11,15 +11,23 @@ export default function Hero() {
         id="hero"
         className="px-8 flex relative z-20 justify-between w-full max-md:px-20 max-md:flex-col max-md:gap-10 max-sm:gap-20 max-sm:px-0 items-center h-[95vh] max-md:h-fit"
       >
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          {/* <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF62AD] opacity-10 rounded-full blur-[120px]" /> */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#5DE4F6] opacity-10 rounded-full blur-[120px]" />
+        </div>
         <section>
           <HeroText />
         </section>
         <section className="card  bg-[#0E0D0D] h-fit w-[300px] flex items-center justify-center">
           <div className="">
-            <img
+            <Image
               alt="Hero image"
               src="/accepted1.png"
-              className="w-auto h-auto"
+              width={300} // Largeur de l'image
+              height={300} // Hauteur de l'image
+              layout="intrinsic" // Ajustement des dimensions
+              priority // Charge cette image en priorité pour de meilleures performances
             />
           </div>
         </section>
