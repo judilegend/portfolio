@@ -6,7 +6,7 @@ import WhatIdo from "./WhatIdo";
 
 const About = memo(() => {
   return (
-    <div className="relative min-h-screen w-full px-4 max-md:px-0 py-8">
+    <div className="relative min-h-screen w-full  max-md:px-0 py-8">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF62AD] opacity-10 rounded-full blur-[120px]" />
@@ -16,9 +16,9 @@ const About = memo(() => {
       {/* Content */}
       <div className="relative z-10">
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-9 gap-6">
+        <div className="grid grid-cols-1 w-full md:grid-cols-2 mt-9 gap-6">
           {/* About Text Section */}
-          <div className="backdrop-blur-sm p-6 rounded-2xl border border-gray-800/50">
+          <div className="backdrop-blur-sm p-1 rounded-2xl border border-gray-800/50">
             <AboutText />
           </div>
 
@@ -53,12 +53,12 @@ const About = memo(() => {
                 return (
                   <div
                     key={index}
-                    className="backdrop-blur-sm p-6  rounded-2xl border border-gray-800/50 flex flex-col items-center "
+                    className="backdrop-blur-sm px-1 py-6 md:px-6 rounded-2xl border border-gray-800/50 flex flex-col items-center "
                   >
                     <div className="w-16 h-16 bg-gradient-to-br from-[#FF62AD] to-[#5DE4F6] rounded-lg mb-4 flex items-center justify-center">
                       {/* Icon placeholder */}
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">
+                    <h3 className="text-lg  font-semibold mb-2">
                       {skills[index].title}
                     </h3>
                     <p className="text-sm text-gray-400 text-center">

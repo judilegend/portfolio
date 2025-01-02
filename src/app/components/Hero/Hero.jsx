@@ -9,7 +9,7 @@ export default function Hero() {
     <>
       <main
         id="hero"
-        className="px-8 flex relative z-20 justify-between w-full max-md:px-20 max-md:flex-col max-md:gap-10 max-sm:gap-20 max-sm:px-0 items-center h-[95vh] max-md:h-fit"
+        className="px-8 flex relative z-20 justify-between w-full max-md:px-20 max-md:flex-col max-md:gap-10 max-sm:gap-20 max-sm:px-10 items-center h-[95vh] max-md:h-fit"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
