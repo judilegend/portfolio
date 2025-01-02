@@ -1,66 +1,80 @@
 import React from "react";
 import "./projet.css";
-// import { SliderData } from "./SliderData";
-// import ImageSlider from "./ImageSlider";
-// import Carousel from "./Carousel";
 import Card from "./Card";
 import SimpleTittle from "../Title/SimpleTittle";
 
 const Projects = () => {
   return (
-    <div className="mt-[55px]   w-full flex flex-col items-center gap-10 ">
-      {/* <ImageSlider slides={SliderData} />
-      <Carousel /> */}
+    <div className="mt-[55px] w-full flex flex-col items-center gap-10">
       <div className="flex justify-start 2xl:justify-start">
-        {/* <Tittle /> */}
-        <SimpleTittle name="My last Project" />
+        <SimpleTittle name="My Projects" />
       </div>
       <div className="grid grid-cols-3 gap-10 justify-center items-center max-[849px]:grid-cols-1 max-xl:grid-cols-2">
         <Card
-          capture="/assets/ihm.png"
-          tittle="Edt-app"
-          sub_title="This project is a projet at school ,this is a gestion de sheldure a the ENI "
-          descri="This is made by NextJs for the frontEnd an NodeJS the backend"
+          capture="/assets/salama.png"
+          tittle="Salama Alert"
+          sub_title="Mobile & Web Alert Management System"
+          descri="A comprehensive alert management system built with React Native and Spring Boot"
+          desc3="/spring.jpg"
+          desc="/typescript.png"
+          desc2="/react-native.jpg"
+          desc1="/css.svg"
+          git="https://github.com/judilegend/salama-alert"
+        />
+        <Card
+          capture="/assets/african.png"
+          tittle="African Bowling"
+          sub_title="Interactive Bowling Game Management System"
+          descri="A bowling game platform managing strikes, spares, and pin tracking with real-time scoring"
           desc3="/express.svg"
-          desc="/tailwind.svg"
-          desc2="/ts.svg"
-          desc1="/next.svg"
-          git="https://github.com/judilegend/Edt.git"
+          desc="/typescript.png"
+          desc2="/tailwind.svg"
+          desc1="/react.svg"
+          git="https://github.com/judilegend/african-bowling"
+        />
+        <Card
+          capture="/assets/agilitime.png"
+          tittle="AgiliTime"
+          sub_title="Advanced Project Management Platform"
+          descri="PWA implementing Agile methodologies, Eisenhower Matrix, and Pomodoro technique for efficient project management"
+          desc3="/next.svg"
+          desc="/typescript.png"
+          desc2="/socket.png"
+          desc1="/pwa.jpg"
+          git="https://github.com/judilegend/agilitime"
+        />
+        <Card
+          capture="/assets/groudent.png"
+          tittle="Groudent"
+          sub_title="Professional Dental Management Platform"
+          descri="Freelance project developed with NuxtJS and Express, following Agile methodologies"
+          desc3="/express.svg"
+          desc="/nuxt.jpg"
+          desc2="/tailwind.svg"
+          desc1="/typescript.png"
+          git="https://github.com/judilegend/groudent"
         />
         <Card
           capture="/assets/foodapp.png"
           tittle="Food-app"
-          sub_title="This project is a about a food application "
-          descri="This is a MERN app ,made by React and Express Js"
+          sub_title="Modern Food Delivery Application"
+          descri="MERN stack application for seamless food ordering experience"
           desc3="/express.svg"
           desc="/css.svg"
           desc2="/js.svg"
           desc1="/react.svg"
           git="https://github.com/judilegend/Food-app.git"
-          // demo="https://food-app24.vercel.app/"
         />
         <Card
           capture="/assets/gcoms.png"
           tittle="Gcoms"
-          sub_title="This project is a about a Commentary and interaction "
-          descri="This is a MERN app ,made by React and Express Js"
+          sub_title="Interactive Commentary Platform"
+          descri="MERN stack application focused on user interaction and commentary management"
           desc3="/express.svg"
           desc="/css.svg"
           desc2="/js.svg"
           desc1="/react.svg"
           git="https://github.com/judilegend/Gcoms.git"
-        />
-
-        <Card
-          capture="/assets/ando.png"
-          tittle="Portfolio"
-          sub_title="This project is a about a food application "
-          descri="This is a MERN app ,made by React and Express Js"
-          desc3="/ts.svg"
-          desc="/tailwind.svg"
-          desc2="/js.svg"
-          desc1="/react.svg"
-          // demo="https://andonirina2.vercel.app/"
         />
       </div>
     </div>

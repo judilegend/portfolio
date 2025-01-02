@@ -26,7 +26,7 @@ const Card = (props) => {
           <a href={props.git}>
             <img src="/github.svg" className="w-8 h-8" />
           </a>
-          <a href={props.demo}>demo </a>
+          {/* <a href={props.demo}>demo </a> */}
         </div>
       </div>
     </article>
