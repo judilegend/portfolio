@@ -16,10 +16,13 @@ const Contact = () => {
         <section className="">
           <div className="mt-20 px-8 flex justify-center  gap-20 max-lg:flex-col max-lg:gap-20 ">
             <div className="max-w-[400px]">
-              <h1>Let's work together</h1>
+              <h1>Open to Opportunities</h1>
               <p>
-                You have a innovate project ,or freelnce projet I'm full free
-                Please contact me.Just send me a feedback
+                I am currently seeking new opportunities as a freelancer or in a
+                full-time position (CDI). Additionally, I am actively looking
+                for an apprenticeship (alternance) to further develop my skills
+                while contributing to impactful projects. Feel free to reach out
+                to discuss potential collaborations!
               </p>
             </div>
             <Formulaire />
